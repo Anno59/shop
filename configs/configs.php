@@ -7,9 +7,6 @@
  */
 require_once '../include.php';
 
-/*define('HOST','127.0.0.1');
-define('PWD','');*/
-
 define('HOST',"localhost");
 define('PWD','123');
 
