@@ -1,0 +1,27 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: yubolin
+ * Date: 2017/2/8
+ * Time: 17:46
+ */
+require_once '../include.php';
+$username = $_POST['username'];
+$password = $_POST['password'];
+@$autoFlag = $_POST['autoFlag'];
+$sql = "select * from imooc_admin where username='{$username}' and password='{$password}'";
+//$sql = "select imooc_admin where username={$username} and password={$password}";
+$row = checkAdmin($sql);
+//var_dump($row['username']);
+if($row){
+    if($autoFlag){
+        setcookie('adminName',$row['username'],time()+7*3600*24);
+        setcookie('adminId',$row['id'],time()+7*3600*24);
+    }
+    $_SESSION['adminName'] = $row['username'];
+    $_SESSION['adminId'] = $row['id'];
+
+    alertMes('登录成功','index.php');
+}else{
+    alertMes('登录失败，重新登录','login.php');
+}
