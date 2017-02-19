@@ -30,6 +30,18 @@ checkLogined();
             }
         }
     </style>
+    <script>
+        $(function () {
+            /*列表点击后显示*/
+            var dropDowns = $('.submenu li');
+            dropDowns.each(function () {
+                $(this).click(function () {
+                    dropDowns.removeClass("active");
+                    $(this).addClass("active");
+                })
+            })
+        })
+    </script>
 </head>
 <body>
 <div class="navbar navbar-default" id="navbar">
@@ -46,16 +58,16 @@ checkLogined();
             <ul class="nav ace-nav">
                 <li class="light-blue">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                                        <span class="user-info">
-                                            <small>欢迎光临,</small>
-                                            <?php
-                                            if(isset($_SESSION['adminName'])){
-                                                echo $_SESSION['adminName'];
-                                            }elseif(isset($_COOKIE['adminName'])){
-                                                echo $_COOKIE['adminName'];
-                                            }
-                                            ?>
-                                        </span>
+                        <span class="user-info">
+                            <small>欢迎光临,</small>
+                            <?php
+                            if(isset($_SESSION['adminName'])){
+                                echo $_SESSION['adminName'];
+                            }elseif(isset($_COOKIE['adminName'])){
+                                echo $_COOKIE['adminName'];
+                            }
+                            ?>
+                        </span>
                         <i class="icon-caret-down"></i>
                     </a>
                     <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
@@ -84,7 +96,6 @@ checkLogined();
                     <a href="#" class="dropdown-toggle">
                         <i class="icon-comments-alt"></i>
                         <span class="menu-text"> 新闻管理 </span>
-
                         <b class="arrow icon-angle-down"></b>
                     </a>
 
@@ -213,7 +224,7 @@ checkLogined();
 
         <div class="main-content">
             <div class="page-content">
-                <iframe src="test.html"  frameborder="0" name="mainFrame" width="100%" height="522"></iframe>
+                <iframe src="main.php"  frameborder="0" name="mainFrame" width="100%" height="522"></iframe>
             </div>
         </div>
     </div>
@@ -221,23 +232,6 @@ checkLogined();
         <i class="icon-double-angle-up icon-only bigger-110"></i>
     </a>
 </div>
-<script type="text/javascript">
-    function show(num,change){
-        var menu=document.getElementById(num);
-        var change=document.getElementById(change);
-        if(change.innerHTML=="+"){
-            change.innerHTML="-";
-        }else{
-            change.innerHTML="+";
-        }
-        if(menu.style.display=='none'){
-            menu.style.display='';
-        }else{
-            menu.style.display='none';
-        }
-    }
-</script>
-
 </body>
 </html>
 
