@@ -60,7 +60,7 @@ if(empty($rows)){
             </tr>
         <?php $i++; endforeach;?>
         <?php
-            if($totalRows>=$pageSize){
+            if($totalRows>$pageSize){
         ?>
                 <tr><td colspan="4"><?php echo showPage($page,$totalPage);?></td></tr>
         <?php

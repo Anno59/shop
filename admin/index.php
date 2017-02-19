@@ -103,7 +103,7 @@ checkLogined();
                         <li>
                             <a href="addAdmin.php" target="mainFrame">
                                 <i class="icon-double-angle-right"></i>
-                                新闻列表
+                                添加新闻
                             </a>
                         </li>
 
@@ -127,7 +127,7 @@ checkLogined();
                         <li>
                             <a href="addAdmin.php" target="mainFrame">
                                 <i class="icon-double-angle-right"></i>
-                                产品列表
+                                添加产品
                             </a>
                         </li>
 
@@ -150,13 +150,6 @@ checkLogined();
 
                     <ul class="submenu">
                         <li>
-                            <a href="addAdmin.php" target="mainFrame">
-                                <i class="icon-double-angle-right"></i>
-                                产品预约列表
-                            </a>
-                        </li>
-
-                        <li>
                             <a href="listAdmin.php" target="mainFrame">
                                 <i class="icon-double-angle-right"></i>
                                 管理产品预约
@@ -175,13 +168,6 @@ checkLogined();
 
                     <ul class="submenu">
                         <li>
-                            <a href="addAdmin.php" target="mainFrame">
-                                <i class="icon-double-angle-right"></i>
-                                用户列表
-                            </a>
-                        </li>
-
-                        <li>
                             <a href="listAdmin.php" target="mainFrame">
                                 <i class="icon-double-angle-right"></i>
                                 管理用户
@@ -199,14 +185,14 @@ checkLogined();
 
                     <ul class="submenu">
                         <li>
-                            <a href="listAdmin.php" target="mainFrame">
+                            <a href="addAdmin.php" target="mainFrame">
                                 <i class="icon-double-angle-right"></i>
-                                管理员列表
+                                添加管理员
                             </a>
                         </li>
 
                         <li>
-                            <a href="addAdmin.php" target="mainFrame">
+                            <a href="listAdmin.php" target="mainFrame">
                                 <i class="icon-double-angle-right"></i>
                                 管理管理员
                             </a>
