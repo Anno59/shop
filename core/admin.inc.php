@@ -16,10 +16,10 @@ function checkLogined(){
 
 function addAdmin(){
     $arr=$_POST;
-    if(insert("imooc_admin",$arr)){
-        return "添加成功!<br/><a href='addAdmin.php'>继续添加</a>|<a href='listAdmin.php'>查看管理员列表</a>";
+    if(insert("imooc_admin", $arr)){
+        alertMes("添加成功", 'listAdmin.php');
     }else{
-        return "添加失败!<br/><a href='addAdmin.php'>重新添加</a>";
+        alertMes("添加失败", 'listAdmin.php');
     }
 }
 
@@ -29,5 +29,29 @@ function logout(){
         setcookie(session_name(),'',time()-1);
     }
     session_destroy();
-//    alertMes("退出成功","login.php");
+    alertMes("退出成功","login.php");
 }
+
+function getAllAdmin(){
+    $sql = "select * from imooc_admin";
+    $rows = fetchAll($sql);
+    return $rows;
+}
+
+function editAdmin($id){
+    $arr = $_POST;
+    if(update("imooc_admin", $arr,"id={$id}")){
+        alertMes("编辑成功", 'listAdmin.php');
+    }else{
+        alertMes("编辑失败", 'listAdmin.php');
+    }
+}
+
+function delAdmin($id){
+    if(delete("imooc_admin","id={$id}")){
+        alertMes("删除成功", 'listAdmin.php');
+    }else{
+        alertMes("删除失败", 'listAdmin.php');
+    }
+}
+

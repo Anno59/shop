@@ -6,11 +6,18 @@
  * Time: 11:19
  */
 require_once "../include.php";
-$act=$_GET['act'];
+$act = $_GET['act'];
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+}
 if($act=='logout'){
     logout();
 }else if($act == 'addAdmin'){
-    $mes = addAdmin();
+    addAdmin();
+}else if($act == 'editAdmin'){
+    editAdmin($id);
+}else if($act == 'delAdmin'){
+    delAdmin($id);
 }
 ?>
 
@@ -23,7 +30,7 @@ if($act=='logout'){
 <body>
 <?php
 if(isset($mes))
-    echo $mes;
+//    echo $mes;
 ?>
 </body>
 </html>

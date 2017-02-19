@@ -16,8 +16,8 @@ if(!$rows){
 }
 */
 require_once "../include.php";
-$rows = getAllAdmin();
-var_dump($rows);
+//$rows = getAllAdmin();
+$rows = getPage("imooc_admin");
 if(empty($rows)){
     alertMes("sorry,没有管理员,请添加!","addAdmin.php");
     exit;
@@ -53,16 +53,19 @@ if(empty($rows)){
 
          ?>
             <tr>
-                <!--这里的id和for里面的c1 需要循环出来-->
-                <td><input type="checkbox" id="c1" class="check"><label for="c1" class="label"><?php echo $i?></label></td>
+                <td><?php echo $i?></td>
                 <td><?php echo $row["username"] ?></td>
                 <td><?php echo $row["email"] ?></td>
-                <td align="center"><input type="button" value="修改" class="btn" onclick="editAdmin()"><input type="button" value="删除" class="btn" onclick="delAdmin()"></td>
+                <td align="center"><input type="button" value="修改" class="btn" onclick="editAdmin(<?php echo $row["id"];?>)"><input type="button" value="删除" class="btn" onclick="delAdmin(<?php echo $row["id"];?>)"></td>
             </tr>
         <?php $i++; endforeach;?>
-        <?php ?>
-        <?php ?>
-
+        <?php
+            if($totalRows>=$pageSize){
+        ?>
+                <tr><td colspan="4"><?php echo showPage($page,$totalPage);?></td></tr>
+        <?php
+            }
+        ?>
         </tbody>
     </table>
 </div>
@@ -72,11 +75,11 @@ if(empty($rows)){
     }
     function delAdmin(id){
         if(window.confirm("您确定要删除吗？删除之后不能恢复哦！！！")){
-            window.location="doAdminAction.php?act=delCate&id="+id;
+            window.location="doAdminAction.php?act=delAdmin&id="+id;
         }
     }
     function addAdmin(){
-        window.location="addCate.php";
+        window.location="addAdmin.php";
     }
 </script>
 </body>

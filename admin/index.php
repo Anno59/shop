@@ -199,14 +199,14 @@ checkLogined();
 
                     <ul class="submenu">
                         <li>
-                            <a href="addAdmin.php" target="mainFrame">
+                            <a href="listAdmin.php" target="mainFrame">
                                 <i class="icon-double-angle-right"></i>
                                 管理员列表
                             </a>
                         </li>
 
                         <li>
-                            <a href="listAdmin.php" target="mainFrame">
+                            <a href="addAdmin.php" target="mainFrame">
                                 <i class="icon-double-angle-right"></i>
                                 管理管理员
                             </a>

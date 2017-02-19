@@ -47,9 +47,9 @@ function update($table,$array,$where=null){
         }else{
             $sep = ',';
         }
-        $str.=$str.$key."='".$val."'";
+        $str.=$sep.$key."='".$val."'";
     }
-    $sql_update = "update {$table} set $str ".($where==null?null:" where ".$where);
+    $sql_update = "update $table set $str ".($where==null?null:" where ".$where);
     $result = mysqli_query($link,$sql_update);
     if($result){
         return mysqli_affected_rows($link);
@@ -95,7 +95,7 @@ function fetchAll($sql,$result_type=MYSQLI_ASSOC){
     $link = connect();
     $result=mysqli_query($link,$sql);
     $rows = array();
-    while($row=mysqli_fetch_array($result,$result_type)){
+    while(@$row=mysqli_fetch_array($result,$result_type)){
         $rows[]=$row;
     }
     return $rows;
