@@ -72,7 +72,7 @@ checkLogined();
                     </a>
                     <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
-                            <a href="#">
+                            <a href="doAdminAction.php?act=logout">
                                 <i class="icon-off"></i>
                                 退出
                             </a>
@@ -101,14 +101,14 @@ checkLogined();
 
                     <ul class="submenu">
                         <li>
-                            <a href="addAdmin.php" target="mainFrame">
+                            <a href="addNews.php" target="mainFrame">
                                 <i class="icon-double-angle-right"></i>
                                 添加新闻
                             </a>
                         </li>
 
                         <li>
-                            <a href="listAdmin.php" target="mainFrame">
+                            <a href="listNews.php" target="mainFrame">
                                 <i class="icon-double-angle-right"></i>
                                 管理新闻
                             </a>

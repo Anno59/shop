@@ -16,16 +16,16 @@ if(!$rows){
 }
 */
 require_once "../include.php";
-//$rows = getAllAdmin();
-$sql="select * from imooc_Admin";
+//$rows = getAllNews();
+$sql="select * from news";
 $rows=fetchAll($sql);
 if(!$rows){
-    alertMes("sorry,没有分类,请添加!","addAdmin.php");
+    alertMes("sorry,没有分类,请添加!","addNews.php");
     exit;
 }
-$rows = getPage("imooc_admin");
+$rows = getPage("news");
 if(empty($rows)){
-    alertMes("sorry,没有管理员,请添加!","addAdmin.php");
+    alertMes("sorry,没有新闻,请添加!","addNews.php");
     exit;
 }
 ?>
@@ -38,13 +38,13 @@ if(empty($rows)){
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles/backstage.css">
-    <title>添加管理员</title>
+    <title>新闻编辑</title>
 </head>
 <body>
 <div class="details">
     <div class="details_operation clearfix">
         <div class="bui_select">
-            <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addAdmin()">
+            <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addNews()">
         </div>
 
     </div<!--表格-->
@@ -52,43 +52,45 @@ if(empty($rows)){
         <thead>
         <tr>
             <th>编号</th>
-            <th>管理员名称</th>
-            <th>管理员邮箱</th>
+            <th>新闻标题</th>
+            <th>新闻概要</th>
+            <th>发布时间</th>
             <th>操作</th>
         </tr>
         </thead>
         <tbody>
         <?php $i=1; foreach($rows as $row):
 
-         ?>
+            ?>
             <tr>
                 <td><?php echo $i?></td>
-                <td><?php echo $row["username"] ?></td>
-                <td><?php echo $row["email"] ?></td>
-                <td align="center"><input type="button" value="修改" class="btn" onclick="editAdmin(<?php echo $row["id"];?>)"><input type="button" value="删除" class="btn" onclick="delAdmin(<?php echo $row["id"];?>)"></td>
+                <td><?php echo $row["title"] ?></td>
+                <td><?php echo $row["description"] ?></td>
+                <td><?php echo $row["pubTime"] ?></td>
+                <td align="center"><input type="button" value="修改" class="btn" onclick="editNews(<?php echo $row["id"];?>)"><input type="button" value="删除" class="btn" onclick="delNews(<?php echo $row["id"];?>)"></td>
             </tr>
-        <?php $i++; endforeach;?>
+            <?php $i++; endforeach;?>
         <?php
-            if($totalRows>$pageSize){
-        ?>
-                <tr><td colspan="4"><?php echo showPage($page,$totalPage);?></td></tr>
-        <?php
-            }
+        if($totalRows>$pageSize){
+            ?>
+            <tr><td colspan="4"><?php echo showPage($page,$totalPage);?></td></tr>
+            <?php
+        }
         ?>
         </tbody>
     </table>
 </div>
 <script type="text/javascript">
-    function editAdmin(id){
-        window.location="editAdmin.php?id="+id;
+    function editNews(id){
+        window.location="editNews.php?id="+id;
     }
-    function delAdmin(id){
+    function delNews(id){
         if(window.confirm("您确定要删除吗？删除之后不能恢复哦！！！")){
-            window.location="doAdminAction.php?act=delAdmin&id="+id;
+            window.location="doNewsAction.php?act=delNews&id="+id;
         }
     }
-    function addAdmin(){
-        window.location="addAdmin.php";
+    function addNews(){
+        window.location="addNews.php";
     }
 </script>
 </body>

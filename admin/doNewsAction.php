@@ -2,22 +2,21 @@
 /**
  * Created by PhpStorm.
  * User: yubolin
- * Date: 2017/2/13
- * Time: 11:19
+ * Date: 2017/2/20
+ * Time: 17:27
  */
 require_once "../include.php";
 $act = $_GET['act'];
 if(isset($_GET['id'])){
     $id = $_GET['id'];
 }
-if($act=='logout'){
-    logout();
-}else if($act == 'addAdmin'){
-    addAdmin();
-}else if($act == 'editAdmin'){
-    editAdmin($id);
-}else if($act == 'delAdmin'){
-    delAdmin($id);
+if($act=='addNews'){
+    addNews();
+}else if($act == 'editNews'){
+    editNews($id);
+}
+else if($act == 'delNews'){
+    delNews($id);
 }
 ?>
 

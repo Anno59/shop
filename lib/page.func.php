@@ -24,7 +24,7 @@ function getPage($table){
         $page=$totalPage;
     }
     $offset=($page-1) * $pageSize;
-    $sql = "select * from imooc_admin limit $offset,$pageSize";
+    $sql = "select * from $table limit $offset,$pageSize";
     $rows = fetchAll($sql);
     return $rows;
 }

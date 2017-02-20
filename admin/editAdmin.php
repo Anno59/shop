@@ -10,33 +10,36 @@ $id=$_REQUEST["id"];
 $sql = "select * from imooc_admin where id='$id'";
 $row = fetchOne($sql);
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <title>管理员编辑</title>
 </head>
 <body>
 <h3>编辑管理员</h3>
-<form action="doAdminAction.php?act=editAdmin&id=<?php echo $id;?>" method="post">
-<table width="70%" border="1" cellpadding="5" cellspacing="0" bgcolor="#cccccc">
-	<tr>
-		<td align="right">管理员名称</td>
-		<td><input type="text" name="username" value="<?php echo $row["username"]?>"/></td>
-	</tr>
-	<tr>
-		<td align="right">管理员密码</td>
-		<td><input type="password" name="password" value="<?php echo $row["password"]?>"/></td>
-	</tr>
-	<tr>
-		<td align="right">管理员邮箱</td>
-		<td><input type="text" name="email" value="<?php echo $row["email"]?>"/></td>
-	</tr>
-	<tr>
-		<td colspan="2"><input type="submit" value="编辑管理员"/></td>
-	</tr>
-
-</table>
-</form>
+<div class="container">
+    <div class="col-sm-offset-3 col-sm-5">
+        <form action="doAdminAction.php?act=editAdmin&id=<?php echo $id;?>" method="post">
+            <div class="form-group">
+                <label>管理员名称</label>
+                <input type="text" name="username" class="form-control"  value="<?php echo $row["username"]?>">
+            </div>
+            <div class="form-group">
+                <label>管理员密码</label>
+                <input type="password" name="password" class="form-control" value="<?php echo $row["password"]?>">
+            </div>
+            <div class="form-group">
+                <label>管理员邮箱</label>
+                <input type="text" class="form-control" name="email" value="<?php echo $row["email"]?>"/>
+            </div>
+            <button type="submit" class="btn btn-default">完成</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>

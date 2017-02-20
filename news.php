@@ -50,26 +50,7 @@
         <p>实现全球营业收入5000亿元以上，其中农业材料业务收入2500亿元，新兴非农业产业收入1000亿元</p>
     </div>
 </div>
-<div class="section2">
-    <div class="container">
-        <h2>新闻概要</h2>
-        <div class="content">
-            <img src="assets/images/n2.jpg" alt="">
-            <div class="img-fig">
-                <p>面创新以适应终端需求用户为中心的科技创新体制和商业模式，资本合作资本合作等方式</p><p>将农业产业链向海内外下游农业、农业、农业工程等高端制造业延伸，长期稳定客户和直供比例达到70%以上。</p>
-            </div>
-            <ul>
-                <li><a href="javascript:void(0)">三届三次董事会决议公告</a></li>
-                <li><a href="javascript:void(0)">2016年半年度报告摘要</a></li>
-                <li><a href="javascript:void(0)">第三次临时股东大会的提示性公告</a></li>
-                <li><a href="javascript:void(0)">面向合格投资者公开发行公司债券公告书</a></li>
-                <li><a href="javascript:void(0)">第三次临时股东大会的通知</a></li>
-                <li><a href="javascript:void(0)">合格投资者公开发行公司债券募集说明书</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="section3 container">
+<div class="section2 container">
     <h2>新闻动态</h2>
     <div class="sec1">
         <img src="assets/images/9.jpg" alt="">
