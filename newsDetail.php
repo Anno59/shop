@@ -5,7 +5,12 @@
  * Date: 2017/2/20
  * Time: 16:47
  */
+require_once "include.php";
+$id = $_GET['id'];
+$sql = "select * from news where id=$id";
+$row = fetchOne($sql);
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,7 +23,9 @@
     <![endif]-->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="icon" href="assets/images/logo.gif" type="image/x-icon"/>
+    <link rel="stylesheet" href="assets/css/newsDetail.css">
     <script src="assets/js/backtotop.js"></script>
+    <script src="assets/js/jquery-2.0.3.min.js"></script>
 </head>
 <body>
 <div class="header">
@@ -34,8 +41,18 @@
         <h1 class="header-h1">农业家园</h1>
     </div>
 </div>
-<div class="">
-
+<div class="newscontent">
+    <h1 class="news_title"><?php echo $row['title']?></h1>
+    <div class="news_about">
+        <p>发布时间：<?php echo $row['pubTime']?></p>
+        <p>来源：平邦保险</p>
+    </div>
+    <div class="contheight"></div>
+    <div class="news_txt"><?php echo $row['content']?></div>
+    <div class="news_editor">编辑：平邦保险<span>未经授权不得转载</span></div>
+    <div class="contheight"></div>
+    <div class="contheight"></div>
+    <div class="news_path"><a href="news.php#newsRec">返回</a></div>
 </div>
 <div class="footer">
     <div class="container">
@@ -56,4 +73,10 @@
     </div>
 </div>
 </body>
+<script>
+    $(function () {
+        var str = $('.news_txt').text();
+        $('.news_txt').html(str.replace(/\s/g,'<div class="contheight"></div>'))
+    })
+</script>
 </html>

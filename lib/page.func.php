@@ -5,7 +5,7 @@
  * Date: 2017/2/8
  * Time: 17:16
  */
-require_once "../include.php";
+//require_once "../include.php";
 
 function getPage($table){
     $sql = "select * from $table";

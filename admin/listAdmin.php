@@ -17,12 +17,6 @@ if(!$rows){
 */
 require_once "../include.php";
 //$rows = getAllAdmin();
-$sql="select * from imooc_Admin";
-$rows=fetchAll($sql);
-if(!$rows){
-    alertMes("sorry,没有分类,请添加!","addAdmin.php");
-    exit;
-}
 $rows = getPage("imooc_admin");
 if(empty($rows)){
     alertMes("sorry,没有管理员,请添加!","addAdmin.php");

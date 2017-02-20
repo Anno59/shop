@@ -5,7 +5,7 @@
  * Date: 2017/2/8
  * Time: 17:54
  */
-require_once '../include.php';
+//require_once '../include.php';
 define('HOST',"localhost");
 define('PWD','123');
 define('USERNAME','root');

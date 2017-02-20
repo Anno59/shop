@@ -1,3 +1,9 @@
+<?php
+require_once "include.php";
+$sql = "select * from news";
+$rows = fetchAll($sql);
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -35,52 +41,55 @@
     </div>
     <div class="sec2">
         <img src="assets/images/2.png" alt="">
-        <h4>决议公告</h4>
-        <p>本次会议通知已于2015年9月2日以专人送达、邮件、电话等方式送达给全体董事、监事。应
-            参加会议董事15名，实到董事15名。</p>
+        <h4>告知义务</h4>
+        <p>如果您因故意或者重大过失未履行规定的如实告知义务，足以影响我们决定是否同意承保或者提高保险费率，我们有权解除合同。</p>
     </div>
     <div class="sec3">
         <img src="assets/images/3.png" alt="">
-        <h4>新农业</h4>
-        <p>培育和发展新材料、新能源、生产性服务产业等非农业产业;积极参与全球产业资源配置，拓展海外业务，构建基于“全球营销服务平台”</p>
+        <h4>安全承诺</h4>
+        <p>我们严格遵守现行的关于个人信息，保护您提供给我们的个人信息、信息和隐私不受到非法的泄露或披露给未获授权的第三方。请您放心。</p>
     </div>
     <div class="sec4">
         <img src="assets/images/4.png" alt="">
-        <h4>营业收入</h4>
-        <p>实现全球营业收入5000亿元以上，其中农业材料业务收入2500亿元，新兴非农业产业收入1000亿元</p>
+        <h4>投诉渠道</h4>
+        <p>如果您在购买产品的过程中，如发现本公司人员有违法违规行为，或认为自身权益受到侵犯，请您保留相关证据并向本公司投诉。</p>
     </div>
 </div>
-<div class="section2 container">
+<div class="section2 container" id="newsRec">
     <h2>新闻动态</h2>
-    <div class="sec1">
-        <img src="assets/images/9.jpg" alt="">
-        <div>
-            <h3>高端农业新品发力海外市场</h3>
-            <p>积极对接市场，以客户需求为导向，充分发挥产线优势。该高端农业的成功研发，对于进一步打开海外市场将起到积极作用。</p>
-        </div>
+    <?php
+    $i=1;
+    foreach($rows as $row){
+    ?>
+    <div class="sec">
+        <span><?php echo $i;?></span>
+        <a href="newsDetail.php?id=<?php echo $row['id']?>">
+            <h3><?php echo $row['title']?></h3>
+            <p><?php echo $row['description']?></p>
+        </a>
     </div>
-    <div class="sec2">
-        <img src="assets/images/10.jpg" alt="">
-        <div>
+<!--    <div class="sec">
+        <span>2</span>
+        <a href="#">
             <h3>含农业产品受核电工程追捧</h3>
             <p>积极对接市场，以客户需求为导向，充分发挥产线优势。该高端农业的成功研发，对于进一步打开海外市场将起到积极作用。</p>
-        </div>
+        </a>
     </div>
-    <div class="sec3">
-        <img src="assets/images/11.jpg" alt="">
-        <div>
+    <div class="sec">
+        <span>3</span>
+        <a href="#">
             <h3>战略品种直供率达100%</h3>
             <p>积极对接市场，以客户需求为导向，充分发挥产线优势。该高端农业的成功研发，对于进一步打开海外市场将起到积极作用。</p>
-        </div>
+        </a>
     </div>
-    <div class="sec4">
-        <img src="assets/images/12.jpg" alt="">
-        <div>
+    <div class="sec">
+        <span>4</span>
+        <a href="#">
             <h3>签署资源战略合作协议</h3>
             <p>积极对接市场，以客户需求为导向，充分发挥产线优势。该高端农业的成功研发，对于进一步打开海外市场将起到积极作用。</p>
-        </div>
-    </div>
-
+        </a>
+    </div>-->
+    <?php $i++;}?>
 </div>
 <div class="footer">
     <div class="container">
