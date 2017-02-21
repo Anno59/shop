@@ -19,3 +19,4 @@ require_once 'string.func.php';
 require_once 'upload.func.php';
 require_once 'admin.inc.php';
 require_once 'news.inc.php';
+require_once 'user.inc.php';

@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -28,18 +29,29 @@
         <h1 class="header-h1">农业家园</h1>
     </div>
 </div>
-<form action="doLogin.php" class="form container" id="form" method="post">
-    <h2>用户登录</h2>
+<form action="doAction.php?act=login" class="form container" id="form" method="post">
+    <h2>用户注册</h2>
     <div class="form-left">
         <label for="username"></label>
-        <input id="username" class="username" name="username" type="text" placeholder="用户名" value="">
+        <input id="username" class="username" name="username" type="text" placeholder="姓名" value="">
         <span></span>
         <label for="password"></label>
         <input id="password" class="password" name="password" type="password" placeholder="密码" value="">
         <span></span>
+        <label for="realname"></label>
+        <input id="realname" class="realname" name="realname" type="text" placeholder="真实姓名" value="">
+        <span></span>
+        <label for="idnumber"></label>
+        <input id="idnumber" maxlength="18" class="idnumber" name="idnumber" type="text" placeholder="身份证号" value="">
+        <span></span>
+        <label for="tel"></label>
+        <input id="tel" maxlength="11" class="tel" name="tel" type="tel" placeholder="电话" value="">
+        <span></span>
+        <label for="email"></label>
+        <input id="email" class="email" name="email" type="text" placeholder="邮箱" value="">
+        <span></span>
         <label for="submit"></label>
         <input id="submit" class="submit" type="submit" value="提交">
-        <a href="register.php">去注册</a>
     </div>
 <!--    <div class="form-right">
         <ul>

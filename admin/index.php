@@ -168,7 +168,14 @@ checkLogined();
 
                     <ul class="submenu">
                         <li>
-                            <a href="listAdmin.php" target="mainFrame">
+                            <a href="addUser.php" target="mainFrame">
+                                <i class="icon-double-angle-right"></i>
+                                添加用户
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="listUser.php" target="mainFrame">
                                 <i class="icon-double-angle-right"></i>
                                 管理用户
                             </a>
@@ -210,7 +217,7 @@ checkLogined();
 
         <div class="main-content">
             <div class="page-content">
-                <iframe src="main.php"  frameborder="0" name="mainFrame" width="100%" height="522"></iframe>
+                <iframe src="main.php"  frameborder="0" name="mainFrame" width="100%" height="560"></iframe>
             </div>
         </div>
     </div>

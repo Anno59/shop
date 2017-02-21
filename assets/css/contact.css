@@ -25,6 +25,9 @@
 .form-left{
     padding: 30px;
     margin-right: 4%;
+    position: relative;
+    left: 50%;
+    margin-left: -25%;
 }
 .form-left>input{
     height:3em;

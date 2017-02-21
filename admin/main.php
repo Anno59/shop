@@ -5,7 +5,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<center>
 	<h3>系统信息</h3>
 	<table width="70%" border="1" cellpadding="5" cellspacing="0" bgcolor="#cccccc">
 		<tr>
@@ -44,7 +43,5 @@
 			<td></td>
 		</tr>
 	</table>
-</center>
-
 </body>
 </html>
