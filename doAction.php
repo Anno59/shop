@@ -7,14 +7,15 @@
  */
 require_once "include.php";
 $act = $_GET['act'];
+var_dump($_POST);
 if($act == 'register'){
-    addUser();
+    frontAddUser();
 }else if($act == 'login') {
     header("Location:doLogin.php");
-}else if($act == 'editUser'){
-    editUser($id);
+}else if($act == 'loginOut'){
+    loginOut();
 }else if($act == 'delUser'){
-    delUser($id);
+//    delUser();
 }
 ?>
 

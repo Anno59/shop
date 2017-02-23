@@ -31,7 +31,7 @@
             <li><a href="about.php">关于我们</a></li>
             <li><a href="news.php">新闻动态</a></li>
             <li><a href="gallery.php">产品列表</a></li>
-            <li><a href="contact.php">联系我们</a></li>
+            <li><a href="userCenter.php">用户中心</a></li>
         </ul>
         <div class="min-navtag">
             <i class="icon-reorder"></i>
@@ -40,14 +40,14 @@
                 <li><a href="about.php">关于我们</a></li>
                 <li><a href="news.php">新闻动态</a></li>
                 <li><a href="gallery.php">产品列表</a></li>
-                <li><a href="contact.php">联系我们</a></li>
+                <li><a href="userCenter.php">用户中心</a></li>
             </ul>
             <ul class="ie8">
                 <li><a class="selected"  href="javascript:void(0)">首页</a></li>
                 <li><a href="about.php">关于我们</a></li>
                 <li><a href="news.php">新闻动态</a></li>
                 <li><a href="gallery.php">产品列表</a></li>
-                <li><a href="contact.php">联系我们</a></li>
+                <li><a href="userCenter.php">用户中心</a></li>
             </ul>
         </div>
         <h1 class="header-h1">农业家园</h1>
@@ -112,7 +112,7 @@
                 <li><a href="about.php">关于我们</a></li>
                 <li><a href="news.php">新闻动态</a></li>
                 <li><a href="gallery.php">产品列表</a></li>
-                <li><a href="contact.php">联系我们</a></li>
+                <li><a href="userCenter.php">用户中心</a></li>
             </ul>
         </div>
         <div class="right">

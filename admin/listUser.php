@@ -63,7 +63,7 @@ if(empty($rows)){
         <?php
         if($totalRows>$pageSize){
             ?>
-            <tr><td colspan="4"><?php echo showPage($page,$totalPage);?></td></tr>
+            <tr><td colspan="8"><?php echo showPage($page,$totalPage);?></td></tr>
             <?php
         }
         ?>

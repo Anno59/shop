@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>contact</title>
+    <title>用户登录</title>
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <!--[if IE 8]>
@@ -23,7 +23,7 @@
             <li><a href="about.php">关于我们</a></li>
             <li><a href="news.php">新闻动态</a></li>
             <li><a href="gallery.php">产品列表</a></li>
-            <li><a  class="selected" href="javascript:void(0)">用户登录</a></li>
+            <li><a  class="selected" href="javascript:void(0)">用户中心</a></li>
         </ul>
         <h1 class="header-h1">农业家园</h1>
     </div>
@@ -60,7 +60,7 @@
                 <li><a href="about.php">关于我们</a></li>
                 <li><a href="news.php">新闻动态</a></li>
                 <li><a href="gallery.php">产品列表</a></li>
-                <li><a  class="selected" href="javascript:void(0)">联系我们</a></li>
+                <li><a  class="selected" href="javascript:void(0)">用户中心</a></li>
             </ul>
         </div>
         <div class="right">

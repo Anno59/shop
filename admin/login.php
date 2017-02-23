@@ -1,48 +1,62 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>登陆</title>
-<link type="text/css" rel="stylesheet" href="styles/reset.css">
-<link type="text/css" rel="stylesheet" href="styles/main.css">
-<!--[if IE 6]>
-<script type="text/javascript" src="../js/DD_belatedPNG_0.0.8a-min.js"></script>
-<script type="text/javascript" src="../js/ie6Fixpng.js"></script>
-<![endif]-->
-</head>
-
-<body>
-<div class="headerBar">
-	<div class="logoBar login_logo">
-		<div class="comWidth">
-			<div class="logo fl">
-				<a href="#"><img src="images/logo.jpg" alt="慕课网"></a>
-			</div>
-			<h3 class="welcome_title">欢迎登陆</h3>
-		</div>
-	</div>
-</div>
-
-<div class="loginBox">
-	<div class="login_cont">
-	<form action="doLogin.php" method="post">
-			<ul class="login">
-				<li class="l_tit">管理员帐号</li>
-				<li class="mb_10"><input type="text"  name="username" placeholder="请输入管理员帐号" class="login_input user_icon"></li>
-				<li class="l_tit">密码</li>
-				<li class="mb_10"><input type="password"  name="password" class="login_input password_icon"></li>
-				<li class="autoLogin"><input type="checkbox" id="a1" class="checked" name="autoFlag" value="1"><label for="a1">自动登陆(一周内自动登陆)</label></li>
-				<li><input type="submit" value="" class="login_btn"></li>
-			</ul>
-		</form>
-	</div>
-</div>
-
-<div class="hr_25"></div>
-<div class="footer">
-	<p><a href="#">慕课简介</a><i>|</i><a href="#">慕课公告</a><i>|</i> <a href="#">招纳贤士</a><i>|</i><a href="#">联系我们</a><i>|</i>客服热线：400-675-1234</p>
-	<p>Copyright &copy; 2006 - 2014 慕课版权所有&nbsp;&nbsp;&nbsp;京ICP备09037834号&nbsp;&nbsp;&nbsp;京ICP证B1034-8373号&nbsp;&nbsp;&nbsp;某市公安局XX分局备案编号：123456789123</p>
-	<p class="web"><a href="#"><img src="images/webLogo.jpg" alt="logo"></a><a href="#"><img src="images/webLogo.jpg" alt="logo"></a><a href="#"><img src="images/webLogo.jpg" alt="logo"></a><a href="#"><img src="images/webLogo.jpg" alt="logo"></a></p>
-</div>
-</body>
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <title>管理员登录</title>
+    <link href="../assets/css/adminLogin.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!--<link href="assets/images/favicon.ico" rel="icon" type="image/ico" />-->
+      <style>
+          body.login{
+              background-color: #427394;
+          }
+      </style>
+  </head>
+  <body class='login'>
+    <div class='wrapper'>
+      <div class='row'>
+        <div class='col-lg-12'>
+          <div class='brand text-center'>
+            <h1>
+              <div class='logo-icon'>
+                <i class='icon-beer'></i>
+              </div>
+              管理系统
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-lg-12'>
+          <form action="doLogin.php" method="post">
+            <fieldset class='text-center'>
+              <legend>管理员登录</legend>
+              <div class='form-group'>
+                <input class='form-control' placeholder='账号' name="username" type='text'>
+              </div>
+              <div class='form-group'>
+                <input class='form-control' placeholder='密码' name="password" type='password'>
+              </div>
+                <input class="btn btn-default" type="submit" value="登录">
+                <br>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <!-- Javascripts -->
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script><script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" type="text/javascript"></script><script src="assets/javascripts/application-985b892b.js" type="text/javascript"></script>-->
+    <!-- Google Analytics -->
+    <script src="../assets/js/jquery-2.0.3.min.js"></script>
+<!--
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+-->
+  </body>
 </html>

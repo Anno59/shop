@@ -71,3 +71,6 @@
 .section2 p{
     color:#999;
 }
+.section2 .pubTime{
+    text-align: right;
+}

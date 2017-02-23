@@ -15,8 +15,8 @@ $row = checkAdmin($sql);
 //var_dump($row['username']);
 if($row){
     if($autoFlag){
-        setcookie('adminName',$row['username'],time()+7*3600*24);
-        setcookie('adminId',$row['id'],time()+7*3600*24);
+        setcookie('adminName',$row['username'],time()+3600*2);
+        setcookie('adminId',$row['id'],time()+3600*2);
     }
     $_SESSION['adminName'] = $row['username'];
     $_SESSION['adminId'] = $row['id'];
