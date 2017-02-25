@@ -123,18 +123,33 @@ CREATE TABLE `news` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
-
+--
+-- 表的结构 `user`
+--
 DROP TABLE if EXISTS  `user`;
 CREATE TABLE `user` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(100) NOT NULL UNIQUE,
-  `password` varchar(255) NOT NULL,
-  `realname` varchar(100) NOT NULL,
-  `idnumber` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `tel` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
+  `username` varchar(20) NOT NULL,
+  `password` char(32) NOT NULL,
+  `realname` varchar(20) NOT NULL,
+  `idnumber` varchar(20) NOT NULL,
+  `tel` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- 转存表中的数据 `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`, `realname`, `idnumber`, `tel`, `email`) VALUES
+(2, '1', '1', '1', '1', '1', '1@q.c'),
+(3, 'root', '123', '1', '1', '1', '1@q.c'),
+(4, 'root111', '123111', '11', '111', '11', '11'),
+(7, 'root1123', '123213', '12312', '123123', '123123', '44'),
+(8, 'root4434', '12312', '123', '12312', '312312', '123');
+
 
 DROP TABLE if EXISTS  `product`;
 CREATE TABLE `product` (
