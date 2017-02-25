@@ -150,6 +150,9 @@ INSERT INTO `user` (`id`, `username`, `password`, `realname`, `idnumber`, `tel`,
 (7, 'root1123', '123213', '12312', '123123', '123123', '44'),
 (8, 'root4434', '12312', '123', '12312', '312312', '123');
 
+--
+-- 表的结构 `product`
+--
 
 DROP TABLE if EXISTS  `product`;
 CREATE TABLE `product` (
