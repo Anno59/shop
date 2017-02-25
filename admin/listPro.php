@@ -16,16 +16,15 @@ if(!$rows){
 }
 */
 require_once "../include.php";
-//$rows = getAllNews();
-$sql="select * from news";
+$sql="select * from product";
 $rows=fetchAll($sql);
 if(!$rows){
-    alertMes("sorry,没有分类,请添加!","addNews.php");
+    alertMes("sorry,没有分类,请添加!","addPro.php");
     exit;
 }
-$rows = getPage("news");
+$rows = getPage("product");
 if(empty($rows)){
-    alertMes("sorry,没有新闻,请添加!","addNews.php");
+    alertMes("sorry,没有新闻,请添加!","addPro.php");
     exit;
 }
 ?>
@@ -38,13 +37,13 @@ if(empty($rows)){
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="styles/backstage.css">
-    <title>新闻编辑</title>
+    <title>保险编辑</title>
 </head>
 <body>
 <div class="details">
     <div class="details_operation clearfix">
         <div class="bui_select">
-            <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addNews()">
+            <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addPro()">
         </div>
 
     </div<!--表格-->
@@ -52,9 +51,10 @@ if(empty($rows)){
         <thead>
         <tr>
             <th>编号</th>
-            <th>新闻标题</th>
-            <th>新闻概要</th>
-            <th>发布时间</th>
+            <th>保险名</th>
+            <th>保险概要</th>
+            <th>保险价格</th>
+            <th>保险优惠价</th>
             <th>操作</th>
         </tr>
         </thead>
@@ -66,15 +66,15 @@ if(empty($rows)){
                 <td><?php echo $i?></td>
                 <td><?php echo $row["title"] ?></td>
                 <td><?php echo $row["description"] ?></td>
-                <td><?php echo $row["pubTime"] ?></td>
-                <td align="center"><input type="button" value="修改" class="btn" onclick="editNews(<?php echo $row["id"];?>)"><input type="button" value="删除" class="btn" onclick="delNews(<?php echo $row["id"];?>)"></td>
+                <td><?php echo $row["prePrice"] ?></td>
+                <td><?php echo $row["discountPrice"] ?></td>
+                <td align="center"><input type="button" value="修改" class="btn" onclick="editPro(<?php echo $row["id"];?>)"><input type="button" value="删除" class="btn" onclick="delPro(<?php echo $row["id"];?>)"></td>
             </tr>
             <?php $i++; endforeach;?>
         <?php
         if($totalRows>$pageSize){
             ?>
             <tr><td colspan="8"><?php echo showPage($page,$totalPage);?></td></tr>
-            <tr><td colspan="4"><?php echo showPage($page,$totalPage);?></td></tr>
             <?php
         }
         ?>
@@ -82,16 +82,16 @@ if(empty($rows)){
     </table>
 </div>
 <script type="text/javascript">
-    function editNews(id){
-        window.location="editNews.php?id="+id;
+    function editPro(id){
+        window.location="editPro.php?id="+id;
     }
-    function delNews(id){
+    function delPro(id){
         if(window.confirm("您确定要删除吗？删除之后不能恢复哦！！！")){
-            window.location="doNewsAction.php?act=delNews&id="+id;
+            window.location="doPro.php?act=delPro&id="+id;
         }
     }
-    function addNews(){
-        window.location="addNews.php";
+    function addPro(){
+        window.location="addPro.php";
     }
 </script>
 </body>

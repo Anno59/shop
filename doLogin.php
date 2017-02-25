@@ -22,5 +22,5 @@ if($row){
 
     alertMes('登录成功','userCenter.php');
 }else{
-    alertMes('登录失败，重新登录','login.php');
+    alertMes('登录失败，重新登录','login.php#form');
 }

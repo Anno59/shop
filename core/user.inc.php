@@ -13,9 +13,9 @@ function checkUser($sql){
 function addUser(){
     $arr=$_POST;
     if(insert("user", $arr)){
-        alertMes("添加成功", 'login.php');
+        alertMes("添加成功", 'addUser.php');
     }else{
-        alertMes("添加失败", 'login.php');
+        alertMes("添加失败", 'addUser.php');
     }
 }
 

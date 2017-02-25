@@ -25,8 +25,8 @@ SET time_zone = "+00:00";
 --
 -- 表的结构 `imooc_admin`
 --
-
-CREATE TABLE IF NOT EXISTS `imooc_admin` (
+DROP TABLE if EXISTS  `imooc_admin`;
+CREATE TABLE `imooc_admin` (
   `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(20) NOT NULL,
   `password` char(32) NOT NULL,
@@ -47,8 +47,8 @@ INSERT INTO `imooc_admin` (`id`, `username`, `password`, `email`) VALUES
 --
 -- 表的结构 `imooc_album`
 --
-
-CREATE TABLE IF NOT EXISTS `imooc_album` (
+DROP TABLE if EXISTS  `imooc_pro`;
+CREATE TABLE `imooc_pro` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pid` int(10) unsigned NOT NULL,
   `albumPath` varchar(50) NOT NULL,
@@ -60,8 +60,8 @@ CREATE TABLE IF NOT EXISTS `imooc_album` (
 --
 -- 表的结构 `imooc_cate`
 --
-
-CREATE TABLE IF NOT EXISTS `imooc_cate` (
+DROP TABLE if EXISTS  `imooc_cate`;
+CREATE TABLE `imooc_cate` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `cName` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -73,8 +73,8 @@ CREATE TABLE IF NOT EXISTS `imooc_cate` (
 --
 -- 表的结构 `imooc_pro`
 --
-
-CREATE TABLE IF NOT EXISTS `imooc_pro` (
+DROP TABLE if EXISTS  `imooc_pro`;
+CREATE TABLE `imooc_pro` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pName` varchar(50) NOT NULL,
   `pSn` varchar(50) NOT NULL,
@@ -96,8 +96,8 @@ CREATE TABLE IF NOT EXISTS `imooc_pro` (
 --
 -- 表的结构 `imooc_user`
 --
-
-CREATE TABLE IF NOT EXISTS `imooc_user` (
+DROP TABLE if EXISTS  `imooc_user`;
+CREATE TABLE `imooc_user` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(20) NOT NULL,
   `password` char(32) NOT NULL,
@@ -113,15 +113,39 @@ CREATE TABLE IF NOT EXISTS `imooc_user` (
 --
 -- 表的结构 `news`
 --
-
-CREATE TABLE IF NOT EXISTS `news` (
+DROP TABLE if EXISTS  `news`;
+CREATE TABLE `news` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(100) NOT NULL,
   `description` varchar(255) NOT NULL,
   `content` text NOT NULL,
   `pubTime` varchar(30) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+
+DROP TABLE if EXISTS  `user`;
+CREATE TABLE `user` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) NOT NULL UNIQUE,
+  `password` varchar(255) NOT NULL,
+  `realname` varchar(100) NOT NULL,
+  `idnumber` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `tel` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+DROP TABLE if EXISTS  `product`;
+CREATE TABLE `product` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `prePrice` varchar(100) NOT NULL,
+  `discountPrice` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
 -- 转存表中的数据 `news`

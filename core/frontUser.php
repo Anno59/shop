@@ -16,7 +16,7 @@ function frontAddUser(){
     if(insert("user", $arr)){
         alertMes("注册成功,请登录", 'login.php');
     }else{
-        alertMes("注册失败", 'login.php');
+        alertMes("注册失败", 'register.php#form');
     }
 }
 function loginOut(){

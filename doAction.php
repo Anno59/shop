@@ -7,7 +7,7 @@
  */
 require_once "include.php";
 $act = $_GET['act'];
-var_dump($_POST);
+//var_dump($_POST);
 if($act == 'register'){
     frontAddUser();
 }else if($act == 'login') {

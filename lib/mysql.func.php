@@ -81,7 +81,7 @@ function delete($table,$where=null){
 function fetchOne($sql,$result_type=MYSQLI_ASSOC){
     $link = connect();
     $query = mysqli_query($link,$sql);
-    $row = mysqli_fetch_array($query,$result_type);
+    $row = @mysqli_fetch_array($query,$result_type);
     return $row;
 }
 

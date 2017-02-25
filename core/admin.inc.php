@@ -17,9 +17,9 @@ function checkLogined(){
 function addAdmin(){
     $arr=$_POST;
     if(insert("imooc_admin", $arr)){
-        alertMes("添加成功", 'listAdmin.php');
+        alertMes("添加成功", 'addAdmin.php');
     }else{
-        alertMes("添加失败", 'listAdmin.php');
+        alertMes("添加失败", 'addAdmin.php');
     }
 }
 

@@ -15,42 +15,48 @@
     width: 100%;
     vertical-align: top;
 }
-.section1 div{
-    position: relative;
+.section1 .container{
+    cursor: pointer;
     overflow: hidden;
-    width: 33.3%;
+}
+.section1 .container div{
     float: left;
+}
+.section1 .container>a{
+    display: block;
+    height: 182px;
+}
+.section1 .pic-container{
+    position: relative;
+    width: 33.3%;
     z-index: 1;
 }
-.section1 div.md-img{
-    float: right;
-    width: 66.66%;
+.section1 .cont-container{
+    width: 66.6%;
+    z-index: 1;
 }
-.section1 div.md-img+div img{
-    height:444px;
-}
-.section1 div:hover{
+.section1 .container:hover .pic-container{
     opacity: .8;
-    cursor: pointer;
 }
-.section1 div::after{
-    content: '特色产品';
+.section1 .pic-container::after{
+    content: '查看详细';
     display: block;
     background-color: #000;
     opacity: 0;
     width: 100%;
-    height:70px;
+    height:50px;
     position: absolute;
-    transition: .5s all ease;
-    bottom:-70px;
+    transition: .2s all ease;
+    bottom:-50px;
     color: #fff;
     text-align: center;
-    line-height: 70px;
+    line-height: 50px;
 }
-.section1 div:hover::after{
+.section1 .container:hover .pic-container::after{
     bottom:0;
     opacity:.6;
 }
+/*
 .lighting-box{
     position: absolute;
     background: #000;
@@ -66,4 +72,4 @@
     top:0;
     opacity: 0;
     transition: .3s all ease;
-}
+}*/

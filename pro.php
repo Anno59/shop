@@ -1,18 +1,23 @@
+<?php
+require_once "include.php";
+$sql = "select * from product";
+$rows = fetchAll($sql);
+?>
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>gallery</title>
+    <title>pro</title>
     <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/gallery.css">
+    <link rel="stylesheet" href="assets/css/pro.css">
     <!--[if IE 8]>
-    <link rel="stylesheet" href="assets/css/gallery-ie8.css">
+    <link rel="stylesheet" href="assets/css/pro-ie8.css">
     <![endif]-->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="icon" href="assets/images/logo.gif" type="image/x-icon"/>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/backtotop.js"></script>
-    <script src="assets/js/gallery.js"></script>
+    <script src="assets/js/pro.js"></script>
 </head>
 <body>
 <div class="header">
@@ -30,36 +35,24 @@
 </div>
 <div class="section1 container">
     <h2>产品列表</h2>
-    <div>
-        <img src="assets/images/b0.jpg" alt="">
+    <?php
+    $i = 0;
+    foreach($rows as $row){
+    ?>
+    <div class="container">
+        <a href="proDetail.php?id=<?php echo $row['id']?>&picNum=<?php echo $i?>">
+            <div class="pic-container">
+                <img src='assets/images/pro<?php echo $i?>.jpg' alt="">
+            </div>
+            <div class="cont-container">
+                <h3><?php echo $row['title']?></h3>
+                <p><?php echo $row['description']?></p>
+            </div>
+        </a>
     </div>
-    <div>
-        <img src="assets/images/b1.jpg" alt="">
-    </div>
-    <div>
-        <img src="assets/images/b2.jpg" alt="">
-    </div>
-    <div>
-        <img src="assets/images/b3.jpg" alt="">
-    </div>
-    <div class="md-img">
-        <img src="assets/images/b4.jpg" alt="">
-    </div>
-    <div>
-        <img src="assets/images/b5.jpg" alt="">
-    </div>
-    <div>
-        <img src="assets/images/b6.jpg" alt="">
-    </div>
-    <div>
-        <img src="assets/images/b7.jpg" alt="">
-    </div>
+    <?php $i++;}?>
 </div>
-<div class="lighting-box"></div>
-<div class="lighting-box-pic">
-    <img src="" alt="">
-</div>
-<div class="footer">
+--><div class="footer">
     <div class="container">
         <div class="left">
             <h2>导航</h2>

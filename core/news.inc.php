@@ -8,9 +8,9 @@
 function addNews(){
     $arr=$_POST;
     if(insert("news", $arr)){
-        alertMes("添加成功", 'listNews.php');
+        alertMes("添加成功", 'addNews.php');
     }else{
-        alertMes("添加失败", 'listNews.php');
+        alertMes("添加失败", 'addNews.php');
     }
 }
 

@@ -21,3 +21,4 @@ require_once 'admin.inc.php';
 require_once 'news.inc.php';
 require_once 'user.inc.php';
 require_once 'frontUser.php';
+require_once 'pro.inc.php';

@@ -23,7 +23,7 @@
             <li><a href="index.php">首页</a></li>
             <li><a href="about.php">关于我们</a></li>
             <li><a href="news.php">新闻动态</a></li>
-            <li><a href="gallery.php">产品列表</a></li>
+            <li><a href="pro.php">产品列表</a></li>
             <li><a  class="selected" href="login.php">用户中心</a></li>
         </ul>
         <h1 class="header-h1">农业家园</h1>
@@ -71,7 +71,7 @@
                 <li><a href="index.php">首页</a></li>
                 <li><a href="about.php">关于我们</a></li>
                 <li><a href="news.php">新闻动态</a></li>
-                <li><a href="gallery.php">产品列表</a></li>
+                <li><a href="pro.php">产品列表</a></li>
                 <li><a  class="selected" href="javascript:void(0)">用户中心</a></li>
             </ul>
         </div>

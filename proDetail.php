@@ -2,12 +2,13 @@
 /**
  * Created by PhpStorm.
  * User: yubolin
- * Date: 2017/2/20
- * Time: 16:47
+ * Date: 2017/2/25
+ * Time: 20:50
  */
 require_once "include.php";
 $id = $_GET['id'];
-$sql = "select * from news where id=$id";
+$picNum = $_GET['picNum'];
+$sql = "select * from product where id=$id";
 $row = fetchOne($sql);
 ?>
 
@@ -15,15 +16,16 @@ $row = fetchOne($sql);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>news</title>
+    <title>pro</title>
     <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/news.css">
+<!--    <link rel="stylesheet" href="assets/css/pro.css">-->
     <!--[if IE 8]>
-    <link rel="stylesheet" href="assets/css/news-ie8.css">
+    <!--<link rel="stylesheet" href="assets/css/pro-ie8.css">-->
     <![endif]-->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+<!--    <link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
     <link rel="icon" href="assets/images/logo.gif" type="image/x-icon"/>
-    <link rel="stylesheet" href="assets/css/newsDetail.css">
+    <link rel="stylesheet" href="assets/css/proDetail.css">
     <script src="assets/js/backtotop.js"></script>
     <script src="assets/js/jquery-2.0.3.min.js"></script>
 </head>
@@ -34,25 +36,28 @@ $row = fetchOne($sql);
         <ul class="nav">
             <li><a href="index.php">首页</a></li>
             <li><a href="about.php">关于我们</a></li>
-            <li><a  class="selected" href="news.php">新闻动态</a></li>
+            <li><a  class="selected" href="pro.php">新闻动态</a></li>
             <li><a href="pro.php">产品列表</a></li>
             <li><a href="login.php">用户中心</a></li>
         </ul>
         <h1 class="header-h1">农业家园</h1>
     </div>
 </div>
-<div class="newscontent">
-    <h1 class="news_title"><?php echo $row['title']?></h1>
-    <div class="news_about">
-        <p>发布时间：<?php echo $row['pubTime']?></p>
-        <p>来源：平邦保险</p>
-    </div>
+<div class="procontent">
+<!--    <h1 class="news_title">--><?php //echo $row['title']?><!--</h1>-->
+        <div class="col-xs-8">
+            <img src='assets/images/pro<?php echo $picNum?>.jpg' alt="">
+        </div>
+        <div class="col-xs-4">
+            <h1 class="pro_title"><?php echo $row['title']?></h1>
+            <div class="pro_txt">简介：<?php echo $row['description']?></div>
+            <div class="pro_txt">价格：<?php echo $row['prePrice']?></div>
+            <div class="pro_txt">优惠价：<?php echo $row['discountPrice']?></div>
+        </div>
+        <!--    <div class="contheight"></div>-->
     <div class="contheight"></div>
-    <div class="news_txt"><?php echo $row['content']?></div>
-    <div class="news_editor">编辑：平邦保险<span>未经授权不得转载</span></div>
     <div class="contheight"></div>
-    <div class="contheight"></div>
-    <div class="news_path"><a href="news.php#newsRec">返回</a></div>
+    <div class="pro_content"><?php echo $row['content']?></div>
 </div>
 <div class="footer">
     <div class="container">
@@ -75,8 +80,8 @@ $row = fetchOne($sql);
 </body>
 <script>
     $(function () {
-        var str = $('.news_txt').text();
-        $('.news_txt').html(str.replace(/\s/g,'<div class="contheight"></div>'))
+        var str = $('.pro_content').text();
+        $('.pro_content').html(str.replace(/\s/g,'<div class="contheight"></div>'))
     })
 </script>
 </html>

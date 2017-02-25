@@ -125,14 +125,14 @@ checkLogined();
 
                     <ul class="submenu">
                         <li>
-                            <a href="addAdmin.php" target="mainFrame">
+                            <a href="addPro.php" target="mainFrame">
                                 <i class="icon-double-angle-right"></i>
                                 添加产品
                             </a>
                         </li>
 
                         <li>
-                            <a href="listAdmin.php" target="mainFrame">
+                            <a href="listPro.php" target="mainFrame">
                                 <i class="icon-double-angle-right"></i>
                                 管理产品
                             </a>
