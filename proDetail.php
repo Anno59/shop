@@ -36,28 +36,42 @@ $row = fetchOne($sql);
         <ul class="nav">
             <li><a href="index.php">首页</a></li>
             <li><a href="about.php">关于我们</a></li>
-            <li><a  class="selected" href="pro.php">新闻动态</a></li>
-            <li><a href="pro.php">产品列表</a></li>
-            <li><a href="login.php">用户中心</a></li>
+            <li><a href="news.php">新闻动态</a></li>
+            <li><a class="selected" href="pro.php">产品列表</a></li>
+            <li><a href="userCenter.php">用户中心</a></li>
         </ul>
         <h1 class="header-h1">农业家园</h1>
     </div>
 </div>
+<h2 class="details">产品详细</h2>
 <div class="procontent">
-<!--    <h1 class="news_title">--><?php //echo $row['title']?><!--</h1>-->
         <div class="col-xs-8">
             <img src='assets/images/pro<?php echo $picNum?>.jpg' alt="">
         </div>
         <div class="col-xs-4">
             <h1 class="pro_title"><?php echo $row['title']?></h1>
             <div class="pro_txt">简介：<?php echo $row['description']?></div>
-            <div class="pro_txt">价格：<?php echo $row['prePrice']?></div>
-            <div class="pro_txt">优惠价：<?php echo $row['discountPrice']?></div>
+            <div class="pro_txt">价格：<span class="prePrice"><?php echo $row['prePrice']?></span></div>
+            <div class="pro_txt">优惠价：<span class="discountPrice"><?php echo $row['discountPrice']?></span></div>
         </div>
         <!--    <div class="contheight"></div>-->
     <div class="contheight"></div>
     <div class="contheight"></div>
+    <div class="pro_txt">产品介绍</div>
     <div class="pro_content"><?php echo $row['content']?></div>
+    <form  class="form" id="form" action="doAction.php?act=order" method="post">
+        <div class="form-left">
+            <label for="username"></label>
+            <input id="username" class="username" name="username" type="hidden" placeholder="" value="<?php echo $_SESSION['userName']?>">
+            <span></span>
+            <label for="proName"></label>
+            <input id="proName" class="proName" name="proName" type="hidden" placeholder="" value="<?php echo $row['title']?>">
+            <label for="proId"></label>
+            <input id="proId" class="proId" name="proId" type="hidden" placeholder="" value="<?php echo $row['id']?>">
+            <label for="submit"></label>
+            <input id="submit" class="submit" type="submit" value="马上预约">
+        </div>
+    </form>
 </div>
 <div class="footer">
     <div class="container">

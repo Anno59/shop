@@ -165,6 +165,14 @@ CREATE TABLE `product` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
+DROP TABLE if EXISTS  `order_pro`;
+CREATE TABLE `order_Pro` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) NOT NULL,
+  `proName` varchar(255) NOT NULL,
+  `proId` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 --
 -- 转存表中的数据 `news`
 --

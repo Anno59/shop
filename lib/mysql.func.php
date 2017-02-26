@@ -31,6 +31,17 @@ function insert($table,$array){
     return mysqli_insert_id($link);
 }
 
+function selectOrder($table,$username,$proId){
+    $link = connect();
+    $result = mysqli_query($link,"select * from $table where username='$username' and proId=$proId");
+    if($result){
+        return mysqli_affected_rows($link);
+    }else{
+        return null;
+    }
+}
+
+
 /**
  * 修改数据
  * @param $table

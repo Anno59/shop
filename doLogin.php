@@ -13,10 +13,10 @@ $sql = "select * from user where username='{$username}' and password='{$password
 $row = checkUser($sql);
 //var_dump($row['username']);
 if($row){
-    if($autoFlag){
+/*    if($autoFlag){
         setcookie('userName',$row['username'],time()+3600*2);
         setcookie('userId',$row['id'],time()+3600*2);
-    }
+    }*/
     $_SESSION['userName'] = $row['username'];
     $_SESSION['userId'] = $row['id'];
 

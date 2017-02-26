@@ -6,7 +6,7 @@
  * Time: 22:40
  */
 function checkUserLogined(){
-    if(@$_SESSION['userId']==''&&@$_COOKIE['userId']==''){
+    if(@$_SESSION['userId']==''&&$_COOKIE['userId']==''){
         alertMes("请先登录","login.php");
     }
 }
@@ -26,4 +26,14 @@ function loginOut(){
     }
     session_destroy();
     alertMes("退出成功","login.php");
+}
+
+function orderPro(){
+    $arr=$_POST;
+    if(selectOrder("order_pro",$arr["username"],$arr["proId"])){
+        alertMes("该产品已预约，请继续预约其它产品","pro.php");
+    }else{
+        insert("order_pro",$arr);
+        alertMes("预约成功","pro.php");
+    }
 }

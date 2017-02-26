@@ -1,7 +1,16 @@
+.header{
+    height: 380px;
+}
+.details{
+    text-align: center;
+    margin-top: 50px;
+    color: #f1c40f;
+    font-weight: normal;
+}
 .procontent {
     width: 670px;
     min-height: 600px;
-    margin: 60px auto 30px;
+    margin: 0 auto 30px;
     border-right: 1px solid #dfdfdf;
     border-left: 1px solid #dfdfdf;
     background-color: #ffffff;
@@ -51,6 +60,14 @@
     color: #00a4eb;
     font-size: 16px;
 }
+.prePrice{
+    text-decoration:line-through;
+}
+.discountPrice,.prePrice{
+    font-weight: bold;
+    color:red;
+    font-size: 30px;
+}
 .col-xs-8{
     /*width: 65%;*/
     border: 1px solid #dfdfdf;
@@ -58,7 +75,28 @@
     padding:10px;
 }
 .col-xs-4{
-    padding-left:5%;
-    width: 32%;
+    padding-left:13%;
+    width: 28%;
     display: inline-block;
+}
+.form-left{
+    position: relative;
+}
+.form-left .submit:hover {
+    background-color: #f39c12;
+    color: #fff;
+}
+.form-left .submit {
+    background-color: #f1c40f;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: .3s ease all;
+    width: 420px;
+    height:48px;
+    position: absolute;
+    left: 50%;
+    margin-left: -210px;
 }
