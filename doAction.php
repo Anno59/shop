@@ -7,6 +7,8 @@
  */
 require_once "include.php";
 $act = $_GET['act'];
+$id = $_GET['id'];
+var_dump($id);
 if($act == 'register'){
     frontAddUser();
 }else if($act == 'login') {
@@ -18,6 +20,8 @@ if($act == 'register'){
 }else if($act == 'order'){
     checkUserLogined();
     orderPro();
+}else if($act == 'cancelProOrder'){
+    cancelProOrder($id);
 }
 ?>
 

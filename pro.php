@@ -39,7 +39,7 @@ $rows = fetchAll($sql);
     $i = 0;
     foreach($rows as $row){
     ?>
-    <div class="container">
+    <div class="container" id="cont-<?php echo $row['id']?>">
         <a href="proDetail.php?id=<?php echo $row['id']?>&picNum=<?php echo $i?>">
             <div class="pic-container">
                 <img src='assets/images/pro<?php echo $i?>.jpg' alt="">
@@ -52,7 +52,7 @@ $rows = fetchAll($sql);
     </div>
     <?php $i++;}?>
 </div>
---><div class="footer">
+<div class="footer">
     <div class="container">
         <div class="left">
             <h2>导航</h2>

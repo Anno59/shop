@@ -86,7 +86,7 @@ if(empty($rows)){
         window.location="editPro.php?id="+id;
     }
     function delPro(id){
-        if(window.confirm("您确定要删除吗？删除之后不能恢复哦！！！")){
+        if(window.confirm("您确定要删除吗？")){
             window.location="doPro.php?act=delPro&id="+id;
         }
     }

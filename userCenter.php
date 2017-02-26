@@ -8,6 +8,9 @@
 require_once 'include.php';
 //var_dump($_SESSION['userName'])
 checkUserLogined();
+$username = $_SESSION['userName'];
+$sql = "select * from order_pro where username='$username'";
+$rows = fetchAll($sql);
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,8 +22,11 @@ checkUserLogined();
     <!--[if IE 8]>
     <link rel="stylesheet" href="assets/css/contact-ie8.css">
     <![endif]-->
+<!--    <link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="admin/styles/backstage.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="icon" href="assets/images/logo.gif" type="image/x-icon"/>
+    <link rel="stylesheet" href="assets/css/userCenter.css">
     <script src="assets/js/backtotop.js"></script>
     <script src="assets/js/jquery.js"></script>
 <!--    <script src="assets/js/contact.js"></script>-->
@@ -44,7 +50,39 @@ checkUserLogined();
     <div class="form-left">
         <h3>欢迎您，<?php echo $_SESSION['userName']?></h3>
         <a href="doAction.php?act=loginOut">注销登录</a>
-        <p>没有产品预约，请添加相应预约</p>
+        <?php
+        if($rows){
+        ?>
+        <table class="table table-striped table-hover table-bordered" cellspacing="0" cellpadding="0">
+            <thead>
+            <tr>
+                <th>编号</th>
+                <th>产品名</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php $i=1; foreach($rows as $row){
+                ?>
+                <tr>
+                    <td><?php echo $i?></td>
+                    <td><?php echo $row["proName"] ?></td>
+                    <td align="center"><input type="button" value="查看" class="btn" onclick="viewDetail(<?php echo $row["proId"];?>)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="取消预约" class="btn" onclick="cancelProOrder(<?php echo $row["id"];?>)"></td>
+                </tr>
+            <?php $i++; }
+            if($totalRows>$pageSize){
+                ?>
+                <tr><td colspan="8"><?php echo showPage($page,$totalPage);?></td></tr>
+                <?php
+            }
+            ?>
+            </tbody>
+        </table>
+        <?php
+        }else{
+            echo "<p>没有产品预约，请添加相应预约</p>";
+        }
+        ?>
 <!--        <label for="username"></label>
         <input id="username" class="username" name="username" type="text" placeholder="用户名" value="">
         <span></span>
@@ -84,5 +122,15 @@ checkUserLogined();
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    function viewDetail(id){
+        window.location="pro.php#cont-"+id;
+    }
+    function cancelProOrder(id){
+        if(window.confirm("您确定要取消吗？")){
+            window.location="doAction.php?act=cancelProOrder&id="+id;
+        }
+    }
+</script>
 </body>
 </html>

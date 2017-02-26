@@ -73,7 +73,7 @@ if(empty($rows)){
 <script type="text/javascript">
 
     function delUser(id){
-        if(window.confirm("您确定要删除吗？删除之后不能恢复哦！！！")){
+        if(window.confirm("您确定要删除吗？")){
             window.location="doUserAction.php?act=delUser&id="+id;
         }
     }

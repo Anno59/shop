@@ -8,7 +8,7 @@
 require_once "include.php";
 $id = $_GET['id'];
 $picNum = $_GET['picNum'];
-$sql = "select * from product where id=$id";
+$sql = "select * from product where id={$id}";
 $row = fetchOne($sql);
 ?>
 
@@ -43,7 +43,7 @@ $row = fetchOne($sql);
         <h1 class="header-h1">农业家园</h1>
     </div>
 </div>
-<h2 class="details">产品详细</h2>
+<h2 class="details" id="anchor">产品详细</h2>
 <div class="procontent">
         <div class="col-xs-8">
             <img src='assets/images/pro<?php echo $picNum?>.jpg' alt="">
@@ -63,6 +63,7 @@ $row = fetchOne($sql);
     <div class="contheight"></div>
     <div class="contheight"></div>
     <div class="contheight"></div>
+    <a href="pro.php#cont-<?php echo $id?>"><返回></a>
     <form  class="form" id="form" action="doAction.php?act=order" method="post">
         <div class="form-left">
             <label for="username"></label>

@@ -42,12 +42,6 @@ if(empty($rows)){
 </head>
 <body>
 <div class="details">
-    <div class="details_operation clearfix">
-        <div class="bui_select">
-            <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addNews()">
-        </div>
-
-    </div<!--表格-->
     <table class="table table-striped table-hover table-bordered" cellspacing="0" cellpadding="0">
         <thead>
         <tr>
@@ -74,7 +68,6 @@ if(empty($rows)){
         if($totalRows>$pageSize){
             ?>
             <tr><td colspan="8"><?php echo showPage($page,$totalPage);?></td></tr>
-            <tr><td colspan="4"><?php echo showPage($page,$totalPage);?></td></tr>
             <?php
         }
         ?>
@@ -86,7 +79,7 @@ if(empty($rows)){
         window.location="editNews.php?id="+id;
     }
     function delNews(id){
-        if(window.confirm("您确定要删除吗？删除之后不能恢复哦！！！")){
+        if(window.confirm("您确定要删除吗？")){
             window.location="doNewsAction.php?act=delNews&id="+id;
         }
     }

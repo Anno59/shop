@@ -77,7 +77,7 @@ if(empty($rows)){
         window.location="editAdmin.php?id="+id;
     }
     function delAdmin(id){
-        if(window.confirm("您确定要删除吗？删除之后不能恢复哦！！！")){
+        if(window.confirm("您确定要删除吗？")){
             window.location="doAdminAction.php?act=delAdmin&id="+id;
         }
     }

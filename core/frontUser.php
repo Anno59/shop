@@ -37,3 +37,11 @@ function orderPro(){
         alertMes("预约成功","pro.php");
     }
 }
+
+function cancelProOrder($id){
+    if(delete("order_pro","id={$id}")){
+        alertMes("取消成功", 'userCenter.php');
+    }else{
+        alertMes("取消失败", 'userCenter.php');
+    }
+}

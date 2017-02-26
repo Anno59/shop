@@ -1,0 +1,12 @@
+.form-left {
+     padding: 70px;
+     margin-right: 0;
+     position: relative;
+     left: 50%;
+     margin-left: -400px;
+}
+.form-left{
+    width: 800px;
+    background-color: #EFEEEE;
+    box-sizing: border-box;
+}

@@ -17,7 +17,7 @@ $row = fetchOne($sql);
     <meta charset="UTF-8">
     <title>news</title>
     <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/news.css">
+<!--    <link rel="stylesheet" href="assets/css/news.css">-->
     <!--[if IE 8]>
     <link rel="stylesheet" href="assets/css/news-ie8.css">
     <![endif]-->
@@ -52,7 +52,7 @@ $row = fetchOne($sql);
     <div class="news_editor">编辑：平邦保险<span>未经授权不得转载</span></div>
     <div class="contheight"></div>
     <div class="contheight"></div>
-    <div class="news_path"><a href="news.php#newsRec">返回</a></div>
+    <div class="news_path"><a href="news.php#newsRec"><返回></a></div>
 </div>
 <div class="footer">
     <div class="container">

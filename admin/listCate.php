@@ -62,7 +62,7 @@ if(!$rows){
 		window.location="editCate.php?id="+id;
 	}
 	function delCate(id){
-		if(window.confirm("您确定要删除吗？删除之后不能恢复哦！！！")){
+		if(window.confirm("您确定要删除吗？")){
 			window.location="doAdminAction.php?act=delCate&id="+id;
 		}
 	}
