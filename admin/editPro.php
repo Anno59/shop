@@ -6,6 +6,7 @@
  * Time: 18:24
  */
 require_once "../include.php";
+checkLogined();
 $id=$_REQUEST["id"];
 $sql = "select * from product where id='$id'";
 $row = fetchOne($sql);
@@ -16,28 +17,29 @@ $row = fetchOne($sql);
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/adminResset.css">
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
-    <title>保险编辑</title>
+    <title>产品编辑</title>
 </head>
 <body>
 <h3>编辑保险</h3>
 <div class="container">
     <form action="doPro.php?act=editPro&id=<?php echo $id;?>" method="post">
         <div class="form-group">
-            <label>保险名</label>
+            <label>产品名</label>
             <input type="text" name="title" class="form-control" id="exampleInputEmail3" placeholder="" value="<?php echo $row["title"]?>">
         </div>
         <div class="form-group">
-            <label>保险概要</label>
+            <label>产品概要</label>
             <input type="text" name="description" class="form-control" id="exampleInputPassword3" placeholder="" value="<?php echo $row["description"]?>">
         </div>
         <div class="form-group">
-            <label>保险价格</label>
+            <label>产品价格</label>
             <input type="text" name="prePrice" class="form-control" id="exampleInputPassword3" placeholder="" value="<?php echo $row["prePrice"]?>">
         </div>
         <div class="form-group">
-            <label>保险优惠价</label>
+            <label>产品优惠价</label>
             <input type="text" name="discountPrice" class="form-control" id="exampleInputPassword3" placeholder="" value="<?php echo $row["discountPrice"]?>">
         </div>
         <div class="form-group">

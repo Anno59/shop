@@ -51,7 +51,7 @@ $row = fetchOne($sql);
         <div class="col-xs-4">
             <h1 class="pro_title"><?php echo $row['title']?></h1>
             <div class="pro_txt">简介：<?php echo $row['description']?></div>
-            <div class="pro_txt">价格：<span class="prePrice">￥<?php echo $row['prePrice']?></span></div>
+            <div class="pro_txt">价&nbsp;&nbsp;&nbsp;格：<span class="prePrice">￥<?php echo $row['prePrice']?></span></div>
             <div class="pro_txt">优惠价：<span class="discountPrice">￥<?php echo $row['discountPrice']?></span></div>
         </div>
         <!--    <div class="contheight"></div>-->
@@ -63,7 +63,6 @@ $row = fetchOne($sql);
     <div class="contheight"></div>
     <div class="contheight"></div>
     <div class="contheight"></div>
-    <a href="pro.php#cont-<?php echo $id?>"><返回></a>
     <form  class="form" id="form" action="doAction.php?act=order" method="post">
         <div class="form-left">
             <label for="username"></label>
@@ -77,6 +76,7 @@ $row = fetchOne($sql);
             <input id="submit" class="submit" type="submit" value="马上预约">
         </div>
     </form>
+    <a href="pro.php#cont-<?php echo $id?>"><返回></a>
 </div>
 <div class="footer">
     <div class="container">

@@ -1,32 +1,10 @@
-<?php /*
-require_once '../include.php';
-$page=$_REQUEST['page']?(int)$_REQUEST['page']:1;
-$sql="select * from imooc_cate";
-$totalRows=getResultNum($sql);
-$pageSize=2;
-$totalPage=ceil($totalRows/$pageSize);
-if($page<1||$page==null||!is_numeric($page))$page=1;
-if($page>=$totalPage)$page=$totalPage;
-$offset=($page-1)*$pageSize;
-$sql="select id,cName from imooc_cate  order by id asc limit {$offset},{$pageSize}";
-$rows=fetchAll($sql);
-if(!$rows){
-	alertMes("sorry,没有分类,请添加!","addCate.php");
-	exit;
-}
-*/
+<?php
 require_once "../include.php";
-//$rows = getAllNews();
-$sql="select * from news";
-$rows=fetchAll($sql);
-if(!$rows){
-    alertMes("sorry,没有分类,请添加!","addNews.php");
-    exit;
-}
+checkLogined();
 $rows = getPage("news");
-if(empty($rows)){
-    alertMes("sorry,没有新闻,请添加!","addNews.php");
-    exit;
+$num = $_GET['num'];
+if(empty($num)){
+    $num=1;
 }
 ?>
 <!doctype html>
@@ -35,12 +13,17 @@ if(empty($rows)){
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/adminResset.css">
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="styles/backstage.css">
     <title>新闻编辑</title>
 </head>
 <body>
+<h3>新闻列表</h3>
+<?php if(empty($rows)) {
+    echo "<p style='text-align: center;margin-top:50px;font-size: 18px;'>暂无新闻，请添加新闻</p>";
+}else{
+?>
 <div class="details">
     <table class="table table-striped table-hover table-bordered" cellspacing="0" cellpadding="0">
         <thead>
@@ -53,17 +36,17 @@ if(empty($rows)){
         </tr>
         </thead>
         <tbody>
-        <?php $i=1; foreach($rows as $row):
+        <?php foreach($rows as $row):
 
             ?>
             <tr>
-                <td><?php echo $i?></td>
+                <td><?php echo $num?></td>
                 <td><?php echo $row["title"] ?></td>
                 <td><?php echo $row["description"] ?></td>
                 <td><?php echo $row["pubTime"] ?></td>
-                <td align="center"><input type="button" value="修改" class="btn" onclick="editNews(<?php echo $row["id"];?>)"><input type="button" value="删除" class="btn" onclick="delNews(<?php echo $row["id"];?>)"></td>
+                <td align="center"><input type="button" value="修改" class="btn" onclick="editNews(<?php echo $row["id"];?>)">&nbsp;&nbsp;&nbsp;<input type="button" value="删除" class="btn" onclick="delNews(<?php echo $row["id"];?>)"></td>
             </tr>
-            <?php $i++; endforeach;?>
+            <?php $num++; endforeach;?>
         <?php
         if($totalRows>$pageSize){
             ?>
@@ -74,6 +57,7 @@ if(empty($rows)){
         </tbody>
     </table>
 </div>
+<?php }?>
 <script type="text/javascript">
     function editNews(id){
         window.location="editNews.php?id="+id;

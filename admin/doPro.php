@@ -6,8 +6,8 @@
  * Time: 18:29
  */
 require_once "../include.php";
+checkLogined();
 $act = $_GET['act'];
-
 if(isset($_GET['id'])){
     $id = $_GET['id'];
 }

@@ -129,7 +129,7 @@
     background: url('../images/contact1.png') no-repeat 60px center;
 }
 .table-bordered {
-    border: 1px solid #ddd;
+    border: 1px solid #bbb;
 }
 .table {
     width: 100%;
@@ -155,17 +155,17 @@ thead {
     border-bottom-width: 2px;
 }
 .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-    border: 1px solid #ddd;
+    border: 1px solid #bbb;
 }
 .table thead>tr>th {
     vertical-align: bottom;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #bbb;
 }
 .table thead>tr>th, .table tbody>tr>th, .table tfoot>tr>th, .table thead>tr>td, .table tbody>tr>td, .table tfoot>tr>td {
     padding: 8px;
     line-height: 1.428571429;
     vertical-align: top;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #bbb;
 }
 th {
     text-align: left;

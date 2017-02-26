@@ -1,14 +1,14 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: yubolin
- * Date: 2017/2/19
- * Time: 11:15
+ * User: 372025284@qq.com
+ * Date: 2017.02.26
+ * Time: 21:05
  */
 require_once "../include.php";
 checkLogined();
 $id=$_REQUEST["id"];
-$sql = "select * from imooc_admin where id='$id'";
+$sql = "select * from news where id='$id'";
 $row = fetchOne($sql);
 ?>
 <!doctype html>
@@ -23,25 +23,23 @@ $row = fetchOne($sql);
     <title>管理员编辑</title>
 </head>
 <body>
-<h3>编辑管理员</h3>
+<h3>编辑新闻</h3>
 <div class="container">
-    <div class="col-sm-offset-3 col-sm-6">
-        <form action="doAdminAction.php?act=editAdmin&id=<?php echo $id;?>" method="post">
+        <form action="doNewsAction.php?act=editNews&id=<?php echo $id;?>" method="post">
             <div class="form-group">
-                <label>管理员名称</label>
-                <input type="text" name="username" class="form-control"  value="<?php echo $row["username"]?>">
+                <label>新闻标题</label>
+                <input type="text" name="title" class="form-control" id="exampleInputEmail3" value="<?php echo $row['title']?>">
             </div>
             <div class="form-group">
-                <label>管理员密码</label>
-                <input type="password" name="password" class="form-control" value="<?php echo $row["password"]?>">
+                <label>新闻概要</label>
+                <input type="text" name="description" class="form-control" id="exampleInputPassword3" value="<?php echo $row['description']?>">
             </div>
             <div class="form-group">
-                <label>管理员邮箱</label>
-                <input type="text" class="form-control" name="email" value="<?php echo $row["email"]?>"/>
+                <label>新闻内容</label>
+                <textarea style="resize: none" class="form-control" name="content" id="content" rows="10"><?php echo $row['content']?></textarea>
             </div>
             <button type="submit" class="btn btn-default">完成</button>
         </form>
-    </div>
 </div>
 </body>
 </html>

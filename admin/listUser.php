@@ -6,11 +6,11 @@
  * Time: 21:13
  */
 require_once "../include.php";
-//$rows = getAllUser();
+checkLogined();
 $rows = getPage("user");
-if(empty($rows)){
-    alertMes("sorry,没有用户,请添加!","addUser.php");
-    exit;
+$num = $_GET['num'];
+if(empty($num)){
+    $num=1;
 }
 ?>
 <!doctype html>
@@ -19,19 +19,18 @@ if(empty($rows)){
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/adminResset.css">
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="styles/backstage.css">
     <title>添加用户</title>
 </head>
 <body>
+<h3>用户列表</h3>
+<?php if(empty($rows)) {
+    echo "<p style='text-align: center;margin-top:50px;font-size: 18px;'>暂无用户，请添加用户</p>";
+}else{
+?>
 <div class="details">
-    <div class="details_operation clearfix">
-        <div class="bui_select">
-            <input type="button" value="添&nbsp;&nbsp;加" class="add"  onclick="addUser()">
-        </div>
-
-    </div<!--表格-->
     <table class="table table-striped table-hover table-bordered" cellspacing="0" cellpadding="0">
         <thead>
         <tr>
@@ -46,11 +45,10 @@ if(empty($rows)){
         </tr>
         </thead>
         <tbody>
-        <?php $i=1; foreach($rows as $row):
-
+        <?php foreach($rows as $row):
             ?>
             <tr class="data">
-                <td><?php echo $i?></td>
+                <td><?php echo $num?></td>
                 <td><?php echo $row["username"] ?></td>
                 <td class="pwd"><?php echo $row["password"] ?></td>
                 <td class="realname"><?php echo $row["realname"] ?></td>
@@ -59,7 +57,7 @@ if(empty($rows)){
                 <td class="email"><?php echo $row["email"] ?></td>
                 <td align="center"><input type="button" value="删除" class="btn" onclick="delUser(<?php echo $row["id"];?>)"></td>
             </tr>
-            <?php $i++; endforeach;?>
+            <?php $num++; endforeach;?>
         <?php
         if($totalRows>$pageSize){
             ?>
@@ -70,6 +68,7 @@ if(empty($rows)){
         </tbody>
     </table>
 </div>
+<?php }?>
 <script type="text/javascript">
 
     function delUser(id){

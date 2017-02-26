@@ -1,15 +1,13 @@
 <?php
 require_once '../include.php';
 checkLogined();
-//var_dump(session_name());
-//var_dump($_SESSION['adminName']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
     <title>日志分析展示系统</title>
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link  rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../assets/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../assets/css/ace.min.css"/>
     <script src="../assets/js/ace-extra.min.js"></script>
@@ -28,6 +26,12 @@ checkLogined();
             .menu-toggler::before, .menu-toggler::after {
                 display: none;
             }
+        }
+        .frame{
+            margin-top: 50px;
+        }
+        small{
+            font-family: "Microsoft YaHei", yaHei;
         }
     </style>
     <script>
@@ -50,16 +54,16 @@ checkLogined();
             <a href="#" class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
-                    日志分析展示系统
+                    平邦保险后台管理系统
                 </small>
-            </a><!-- /.brand -->
-        </div><!-- /.navbar-header -->
+            </a>
+        </div>
         <div class="navbar-header pull-right" role="navigation">
             <ul class="nav ace-nav">
                 <li class="light-blue">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                         <span class="user-info">
-                            <small>欢迎光临,</small>
+                            <small>欢迎光临</small>
                             <?php
                             if(isset($_SESSION['adminName'])){
                                 echo $_SESSION['adminName'];
@@ -68,20 +72,20 @@ checkLogined();
                             }
                             ?>
                         </span>
-                        <i class="icon-caret-down"></i>
+<!--                        <i class="icon-caret-down"></i>-->
                     </a>
-                    <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+<!--                    <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                         <li>
                             <a href="doAdminAction.php?act=logout">
                                 <i class="icon-off"></i>
                                 退出
                             </a>
                         </li>
-                    </ul>
+                    </ul>-->
                 </li>
-            </ul><!-- /.ace-nav -->
-        </div><!-- /.navbar-header -->
-    </div><!-- /.container -->
+            </ul>
+        </div>
+    </div>
 </div>
 
 <div class="main-container" id="main-container">
@@ -92,6 +96,21 @@ checkLogined();
 
         <div class="sidebar" id="sidebar">
             <ul class="nav nav-list">
+                <li class="open">
+                    <a href="#" class="dropdown-toggle">
+                        <i class="icon-home"></i>
+                        <span class="menu-text">主页中心</span>
+                        <b class="arrow icon-angle-down"></b>
+                    </a>
+                    <ul class="submenu" style="display: block">
+                        <li class="active" >
+                            <a href="main.php" target="mainFrame">
+                                <i class="icon-double-angle-right"></i>
+                                首页
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li>
                     <a href="#" class="dropdown-toggle">
                         <i class="icon-comments-alt"></i>
@@ -206,6 +225,30 @@ checkLogined();
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="#" class="dropdown-toggle">
+                        <i class="icon-off"></i>
+                        <span class="menu-text"> 退出管理 </span>
+
+                        <b class="arrow icon-angle-down"></b>
+                    </a>
+
+                    <ul class="submenu">
+                        <li>
+                            <a href="../index.php">
+                                <i class="icon-double-angle-right"></i>
+                                返回前台主页
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="doAdminAction.php?act=logout">
+                                <i class="icon-double-angle-right"></i>
+                                退出注销
+                            </a>
+                        </li>
+                    </ul>
+                </li>
 
             </ul>
 
@@ -217,7 +260,7 @@ checkLogined();
 
         <div class="main-content">
             <div class="page-content">
-                <iframe src="main.php"  frameborder="0" name="mainFrame" width="100%" height="560"></iframe>
+                <iframe src="main.php" class="frame" frameborder="0" name="mainFrame" width="100%" height="600"></iframe>
             </div>
         </div>
     </div>

@@ -10,9 +10,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 @$autoFlag = $_POST['autoFlag'];
 $sql = "select * from imooc_admin where username='{$username}' and password='{$password}'";
-//$sql = "select imooc_admin where username={$username} and password={$password}";
 $row = checkAdmin($sql);
-//var_dump($row['username']);
 if($row){
     if($autoFlag){
         setcookie('adminName',$row['username'],time()+3600*2);
