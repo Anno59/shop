@@ -40,3 +40,11 @@ function delPro($id){
         alertMes("删除失败", 'listPro.php');
     }
 }
+
+function delOrder($id){
+    if(delete("order_pro","id={$id}")){
+        alertMes("删除成功", 'listOrder.php');
+    }else{
+        alertMes("删除失败", 'listOrder.php');
+    }
+}

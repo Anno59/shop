@@ -7,6 +7,7 @@
  */
 require_once "../include.php";
 $act = $_GET['act'];
+
 if(isset($_GET['id'])){
     $id = $_GET['id'];
 }
@@ -16,5 +17,7 @@ if($act == 'addPro'){
     editPro($id);
 }else if($act == 'delPro'){
     delPro($id);
+}else if($act == 'delOrder'){
+    delOrder($id);
 }
 ?>
