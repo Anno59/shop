@@ -1,0 +1,200 @@
+.header{
+    height:350px;
+}
+.form{
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+.form h2{
+    color:#f1c40f;
+    font-weight: normal;
+    text-align:center;
+    margin: 80px 0;
+}
+.form::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.form-left,.form-right{
+    width: 48%;
+    background-color: #EFEEEE;
+    box-sizing: border-box;
+    float: left;
+}
+.form-left{
+    padding: 30px;
+    margin-right: 4%;
+    position: relative;
+    left: 50%;
+    margin-left: -25%;
+}
+.form-left>input{
+    height:3em;
+    width: 100%;
+    border: none;
+    margin-bottom: 1em;
+    text-indent: 1em;
+    font-size: 1em;
+    color:#666;
+}
+.form-left .sex{
+    margin-bottom:.8em;
+    line-height: 2em;
+    color:#666;
+}
+.form-left .sex i{
+    cursor: pointer;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+.form-left .sex i.icon-circle{
+    color:#f1c40f;
+}
+.form-left .sex i.icon-circle-blank{
+    color:#999;
+}
+.form-left .sex input{
+    display: none;
+}
+.form-left span{
+    display: block;
+    height:2em;
+    color:#999;
+    font-size: 1.1em;
+}
+.form-left span i.icon-remove-circle{
+    font-size: 1.7em;
+    color:#D9534F;
+    vertical-align: middle;
+}
+.form-left span i.icon-ok-circle{
+    font-size: 1.7em;
+    color:#5CB85C;
+    vertical-align: middle;
+}
+.form-left textarea{
+    width: 100%;
+    resize: none;
+    border: none;
+    text-indent: 1em;
+    height: 200px;
+    margin-bottom: 1em;
+    font-size: 1em;
+    color:#666;
+}
+.form-left .submit{
+    background-color:#f1c40f;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    margin-bottom: 0;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.form-left button{
+    border: none;
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    transition: .3s ease all;
+    background: none;
+}
+.form-left .submit:hover{
+    background-color: #f39c12;
+    color: #fff;
+}
+.form-left button:hover{
+    color: #f39c12;
+}
+.form-right{
+    padding: 48px;
+}
+.form-right ul{
+    list-style:none;
+}
+.form-right li{
+    height:140px;
+    text-indent: 160px;
+    line-height: 140px;
+}
+.table-bordered {
+    border: 1px solid #bbb;
+}
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+table {
+    max-width: 100%;
+    background-color: transparent;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.table caption+thead tr:first-child th, .table colgroup+thead tr:first-child th, .table thead:first-child tr:first-child th, .table caption+thead tr:first-child td, .table colgroup+thead tr:first-child td, .table thead:first-child tr:first-child td {
+    border-top: 0;
+}
+.table-bordered>thead>tr>th, .table-bordered>thead>tr>td {
+    border-bottom-width: 2px;
+}
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+    border: 1px solid #bbb;
+}
+.table thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #bbb;
+}
+.table thead>tr>th, .table tbody>tr>th, .table tfoot>tr>th, .table thead>tr>td, .table tbody>tr>td, .table tfoot>tr>td {
+    padding: 8px;
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 1px solid #bbb;
+}
+th {
+    text-align: left;
+}
+a:hover{
+    text-decoration: none;
+}
+.btn:hover, .btn:focus {
+    color: #333;
+    text-decoration: none;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.form-left>a{
+    margin-top:10px;
+    color:#777;
+}
+.form-left .submit{
+    margin-bottom:30px;
+}

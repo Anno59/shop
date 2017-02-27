@@ -38,7 +38,7 @@ $row = fetchOne($sql);
             <li><a href="pro.php">产品列表</a></li>
             <li><a href="login.php">用户中心</a></li>
         </ul>
-        <h1 class="header-h1">农业家园</h1>
+        <h1 class="header-h1">平邦保险</h1>
     </div>
 </div>
 <div class="newscontent">

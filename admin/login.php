@@ -8,8 +8,17 @@
     <link href="../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <script src="../assets/js/jquery-2.0.3.min.js"></script>
     <style>
+        *{
+            font-family: "Microsoft YaHei", yaHei;
+        }
         body.login {
-            background-color: #427394;
+            background-color: #ffd16b;
+        }
+        body.login .wrapper .brand h1 .logo-icon i[class*='icon-'] {
+            color: #ffffff;
+        }
+        body.login .wrapper .brand h1 .logo-icon {
+            background: #ffd16b;
         }
     </style>
 </head>
@@ -22,8 +31,9 @@
                     <div class='logo-icon'>
                         <i class='icon-beer'></i>
                     </div>
-                    管理系统
                 </h1>
+                <h3>平邦保险管理系统</h3>
+
             </div>
         </div>
     </div>
@@ -31,7 +41,7 @@
         <div class='col-lg-12'>
             <form action="doLogin.php" method="post">
                 <fieldset class='text-center'>
-                    <legend>管理员登录</legend>
+                    <h4>管理员登录</h4>
                     <div class='form-group'>
                         <input class='form-control' placeholder='账号' name="username" type='text'>
                     </div>

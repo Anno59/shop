@@ -6,7 +6,7 @@ checkLogined();
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>日志分析展示系统</title>
+    <title>平邦保险管理系统</title>
     <link  rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../assets/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../assets/css/ace.min.css"/>
@@ -33,6 +33,24 @@ checkLogined();
         small{
             font-family: "Microsoft YaHei", yaHei;
         }
+        .navbar{
+            background-color: #f1c40f;
+        }
+        .ace-nav>li.light-blue>a{
+            background-color: #efa80a;
+        }
+        .ace-nav>li.light-blue>a:hover, .ace-nav>li.light-blue>a:focus,.nav-list>li>a:hover:before{
+            background-color: #b57f07;
+        }
+        .nav-list li.active>a:after{
+            border-right-color: #efa80a;
+        }
+        .nav-list>li .submenu>li.active>a,.nav-list>li.open>a,.nav-list>li>a:hover,.nav-list>li .submenu>li>a:hover{
+            color: #efa80a;
+        }
+        .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+            border-color: #efa80a;
+        }
     </style>
     <script>
         $(function () {
@@ -54,7 +72,7 @@ checkLogined();
             <a href="#" class="navbar-brand">
                 <small>
                     <i class="icon-leaf"></i>
-                    平邦保险后台管理系统
+                    平邦保险管理系统
                 </small>
             </a>
         </div>

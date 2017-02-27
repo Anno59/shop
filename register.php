@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>用户登录</title>
     <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/register.css">
     <!--[if IE 8]>
     <link rel="stylesheet" href="assets/css/contact-ie8.css">
     <![endif]-->
@@ -26,7 +26,7 @@
             <li><a href="pro.php">产品列表</a></li>
             <li><a  class="selected" href="login.php">用户中心</a></li>
         </ul>
-        <h1 class="header-h1">农业家园</h1>
+        <h1 class="header-h1">平邦保险</h1>
     </div>
 </div>
 <form action="doAction.php?act=register" class="form container" id="form" method="post">
