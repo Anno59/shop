@@ -90,10 +90,10 @@ $row = fetchOne($sql);
                 <li><a href="login.php">用户中心</a></li>
             </ul>
         </div>
-        <div class="right">
+<!--        <div class="right">
             <h2>订阅我们</h2><br>
             <input class="email" type="text" placeholder="你的邮箱"><input type="button" value="订阅">
-        </div>
+        </div>-->
     </div>
 </div>
 </body>

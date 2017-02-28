@@ -34,8 +34,9 @@ $rows = fetchAll($sql);
     </div>
 </div>
 <div class="section1 container">
-    <h2>产品列表</h2>
     <?php
+    if($rows){
+    echo "<h2>产品列表</h2>";
     $i = 0;
     foreach($rows as $row){
     ?>
@@ -50,7 +51,11 @@ $rows = fetchAll($sql);
             </div>
         </a>
     </div>
-    <?php $i++;}?>
+    <?php $i++;}
+    }else{
+        echo "<h2>暂无产品</h2>";
+    }
+    ?>
 </div>
 <div class="footer">
     <div class="container">
@@ -64,11 +69,11 @@ $rows = fetchAll($sql);
                 <li><a href="userCenter.php">用户中心</a></li>
             </ul>
         </div>
-        <div class="right">
+<!--        <div class="right">
             <h2>订阅我们</h2><br>
             <input class="email" type="text" placeholder="你的邮箱"><input type="button" value="订阅">
         </div>
-    </div>
+-->    </div>
 </div>
 </body>
 </html>

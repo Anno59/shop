@@ -57,9 +57,10 @@ $rows = fetchAll($sql);
     </div>
 </div>
 <div class="section2 container" id="newsRec">
-    <h2>新闻动态</h2>
     <?php
-    $i=1;
+    if($rows){
+        echo "<h2>新闻列表</h2>";
+        $i=1;
     foreach($rows as $row){
     ?>
     <div class="sec">
@@ -91,7 +92,10 @@ $rows = fetchAll($sql);
             <p>积极对接市场，以客户需求为导向，充分发挥产线优势。该高端农业的成功研发，对于进一步打开海外市场将起到积极作用。</p>
         </a>
     </div>-->
-    <?php $i++;}?>
+    <?php $i++;}
+    }else{
+        echo "<h2>暂无新闻</h2>";
+    }?>
 </div>
 <div class="footer">
     <div class="container">
@@ -105,11 +109,11 @@ $rows = fetchAll($sql);
                 <li><a href="userCenter.php">用户中心</a></li>
             </ul>
         </div>
-        <div class="right">
+<!--        <div class="right">
             <h2>订阅我们</h2><br>
             <input class="email" type="text" placeholder="你的邮箱"><input type="button" value="订阅">
         </div>
-    </div>
+-->    </div>
 </div>
 </body>
 </html>

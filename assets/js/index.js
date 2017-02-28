@@ -2,11 +2,11 @@
  * 首页渲染动画
  */
 function beginAni() {
-    $('.bg').mousemove(function (e) {
-        var x=Math.ceil(e.clientX/-20);
-        var y=Math.ceil(e.clientY/-20);
-        $(this).css('transform','translate('+x+'px,'+y+'px)');
-    })
+    $('.header').mousemove(function (e) {
+        var x=parseInt(e.clientX/-40);
+        var y=parseInt(e.clientY/-40);
+        $('.bg').css('transform','translate('+x+'px,'+y+'px)');
+    });
     $('.nav').addClass('ani-nav');
     $('.icon-reorder').addClass('ani-nav');
     $('.header-h1').addClass('ani-header-h1');
