@@ -10,7 +10,7 @@
 function getPage($table){
     global $i;
     $i=1;
-    $sql = "select * from $table";
+    $sql = "select * from $table ";
     global $totalRows;
     $totalRows = getResultNum($sql);
     global $pageSize;

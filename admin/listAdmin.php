@@ -35,6 +35,7 @@ if(empty($num)){
         </tr>
         </thead>
         <tbody>
+
         <?php foreach($rows as $row):
 
          ?>

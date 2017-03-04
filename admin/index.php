@@ -39,8 +39,9 @@ checkLogined();
         .ace-nav>li.light-blue>a{
             background-color: #efa80a;
         }
-        .ace-nav>li.light-blue>a:hover, .ace-nav>li.light-blue>a:focus,.nav-list>li>a:hover:before{
-            background-color: #b57f07;
+        .ace-nav>li.light-blue>a:hover, .ace-nav>li.light-blue>a:focus,.nav-list>li>a:hover:before,.nav-list>li>a:focus {
+            background-color: #f9f9f9;
+            color: #efa80a;
         }
         .nav-list li.active>a:after{
             border-right-color: #efa80a;
@@ -50,6 +51,9 @@ checkLogined();
         }
         .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
             border-color: #efa80a;
+        }
+        .nav-list>li>a,.nav-list>li>a b{
+            color: #585858;
         }
     </style>
     <script>
