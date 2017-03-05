@@ -17,18 +17,18 @@ checkLogined();
 <h3>添加管理员</h3>
 <div class="container">
     <div class="col-sm-offset-3 col-sm-6">
-    <form action="doAdminAction.php?act=addAdmin" method="post">
+    <form action="doAdmin.php?act=addAdmin" method="post">
         <div class="form-group">
             <label>管理员名称</label>
-            <input class="form-control" type="text" name="username" placeholder="请输入名称"/>
+            <input class="form-control" type="text" name="username" placeholder="请输入名称" required/>
         </div>
         <div class="form-group">
             <label>管理员密码</label>
-            <input class="form-control" type="password" name="password" placeholder="请输入密码"/>
+            <input class="form-control" type="password" name="password" placeholder="请输入密码" required/>
         </div>
         <div class="form-group">
             <label>管理员邮箱</label>
-            <input class="form-control" type="text" name="email" placeholder="请输入邮箱"/>
+            <input class="form-control" type="text" name="email" placeholder="请输入邮箱" required/>
         </div>
         <button type="submit" class="btn btn-default">完成</button>
     </form>

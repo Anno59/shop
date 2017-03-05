@@ -14,9 +14,7 @@ if($act == 'register'){
 }else if($act == 'login') {
     header("Location:doLogin.php");
 }else if($act == 'loginOut'){
-    loginOut();
-}else if($act == 'delUser'){
-//    delUser();
+    frontLoginOut();
 }else if($act == 'order'){
     checkUserLogined();
     orderPro();

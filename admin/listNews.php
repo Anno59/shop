@@ -64,7 +64,7 @@ if(empty($num)){
     }
     function delNews(id){
         if(window.confirm("您确定要删除吗？")){
-            window.location="doNewsAction.php?act=delNews&id="+id;
+            window.location="doNews.php?act=delNews&id="+id;
         }
     }
     function addNews(){

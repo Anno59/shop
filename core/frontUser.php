@@ -8,6 +8,7 @@
 function checkUserLogined(){
     if(@$_SESSION['userId']==''&&$_COOKIE['userId']==''){
         alertMes("请先登录","login.php");
+        exit;
     }
 }
 
@@ -19,7 +20,7 @@ function frontAddUser(){
         alertMes("注册失败", 'register.php#form');
     }
 }
-function loginOut(){
+function frontLoginOut(){
     $_SESSION = array();
     if(isset($_COOKIE[session_name()])){
         setcookie(session_name(),'',time()-1);

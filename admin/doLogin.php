@@ -9,7 +9,7 @@ require_once '../include.php';
 $username = $_POST['username'];
 $password = $_POST['password'];
 @$autoFlag = $_POST['autoFlag'];
-$sql = "select * from imooc_admin where username='{$username}' and password='{$password}'";
+$sql = "select * from admin where username='{$username}' and password='{$password}'";
 $row = checkAdmin($sql);
 if($row){
     if($autoFlag){

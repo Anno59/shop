@@ -16,19 +16,19 @@ checkLogined();
 <body>
 <h3>添加新闻</h3>
 <div class="container">
-    <form action="doNewsAction.php?act=addNews" method="post">
+    <form action="doNews.php?act=addNews" method="post">
         <div class="form-group">
             <label>新闻标题</label>
-            <input type="text" name="title" class="form-control" id="exampleInputEmail3" placeholder="标题">
+            <input type="text" name="title" class="form-control" id="exampleInputEmail3" placeholder="标题" required>
         </div>
         <div class="form-group">
             <label>新闻概要</label>
-            <input type="text" name="description" class="form-control" id="exampleInputPassword3" placeholder="概要">
+            <input type="text" name="description" class="form-control" id="exampleInputPassword3" placeholder="概要" required>
         </div>
         <input type="hidden" name="pubTime" value="<?php date_default_timezone_set('PRC');echo date('Y-m-d H:i:s');?>">
         <div class="form-group">
             <label>新闻内容</label>
-            <textarea style="resize: none" class="form-control" name="content" id="content" rows="10" placeholder="内容"></textarea>
+            <textarea style="resize: none" class="form-control" name="content" id="content" rows="10" placeholder="内容" required></textarea>
         </div>
         <button type="submit" class="btn btn-default">完成</button>
     </form>

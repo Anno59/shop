@@ -120,7 +120,24 @@ function allAni() {
      */
 }
 $(function () {
-    beginAni();
-    allAni();
-    minNav();
-});
+        beginAni();
+        allAni();
+        minNav();
+    }
+);
+var arr = [1,2,43];
+var json = {a:6,b:4,c:[1,2,3]};
+var json2 = clone(json);
+console.log(json['c']);
+function clone(obj){
+    var oNew = new obj.constructor(obj.valueOf());
+    if(obj.constructor == Object){
+        for(var i in obj){
+            oNew[i] = obj[i];
+            if(typeof(oNew[i]) == 'object'){
+                clone(oNew[i]);
+            }
+        }
+    }
+    return oNew;
+}

@@ -16,7 +16,7 @@ function checkLogined(){
 
 function addAdmin(){
     $arr=$_POST;
-    if(insert("imooc_admin", $arr)){
+    if(insert("admin", $arr)){
         alertMes("添加成功", 'addAdmin.php');
     }else{
         alertMes("添加失败", 'addAdmin.php');
@@ -28,19 +28,18 @@ function logout(){
     if(isset($_COOKIE[session_name()])){
         setcookie(session_name(),'',time()-1);
     }
-    session_destroy();
     alertMes("退出成功","login.php");
 }
 
 function getAllAdmin(){
-    $sql = "select * from imooc_admin";
+    $sql = "select * from admin";
     $rows = fetchAll($sql);
     return $rows;
 }
 
 function editAdmin($id){
     $arr = $_POST;
-    if(update("imooc_admin", $arr,"id={$id}")){
+    if(update("admin", $arr,"id={$id}")){
         alertMes("编辑成功", 'listAdmin.php');
     }else{
         alertMes("编辑失败", 'listAdmin.php');
@@ -48,7 +47,7 @@ function editAdmin($id){
 }
 
 function delAdmin($id){
-    if(delete("imooc_admin","id={$id}")){
+    if(delete("admin","id={$id}")){
         alertMes("删除成功", 'listAdmin.php');
     }else{
         alertMes("删除失败", 'listAdmin.php');

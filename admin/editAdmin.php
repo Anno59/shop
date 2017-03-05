@@ -8,7 +8,7 @@
 require_once "../include.php";
 checkLogined();
 $id=$_REQUEST["id"];
-$sql = "select * from imooc_admin where id='$id'";
+$sql = "select * from admin where id='$id'";
 $row = fetchOne($sql);
 ?>
 <!doctype html>
@@ -26,18 +26,18 @@ $row = fetchOne($sql);
 <h3>编辑管理员</h3>
 <div class="container">
     <div class="col-sm-offset-3 col-sm-6">
-        <form action="doAdminAction.php?act=editAdmin&id=<?php echo $id;?>" method="post">
+        <form action="doAdmin.php?act=editAdmin&id=<?php echo $id;?>" method="post">
             <div class="form-group">
                 <label>管理员名称</label>
-                <input type="text" name="username" class="form-control"  value="<?php echo $row["username"]?>">
+                <input type="text" name="username" class="form-control" required  value="<?php echo $row["username"]?>">
             </div>
             <div class="form-group">
                 <label>管理员密码</label>
-                <input type="password" name="password" class="form-control" value="<?php echo $row["password"]?>">
+                <input type="password" name="password" class="form-control" required value="<?php echo $row["password"]?>">
             </div>
             <div class="form-group">
                 <label>管理员邮箱</label>
-                <input type="text" class="form-control" name="email" value="<?php echo $row["email"]?>"/>
+                <input type="text" class="form-control" name="email" required value="<?php echo $row["email"]?>"/>
             </div>
             <button type="submit" class="btn btn-default">完成</button>
         </form>

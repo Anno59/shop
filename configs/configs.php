@@ -9,5 +9,5 @@
 define('HOST',"localhost");
 define('PWD','123');
 define('USERNAME','root');
-define('DBNAME','shopimooc');
+define('DBNAME','insurance');
 define('DBCHARSET','utf8');

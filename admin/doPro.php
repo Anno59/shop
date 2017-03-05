@@ -17,7 +17,7 @@ if($act == 'addPro'){
     editPro($id);
 }else if($act == 'delPro'){
     delPro($id);
-}else if($act == 'delOrder'){
+}else if($act == 'delOrder') {
     delOrder($id);
 }
 ?>

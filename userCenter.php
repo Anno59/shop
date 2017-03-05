@@ -23,7 +23,7 @@ $rows = fetchAll($sql);
     <link rel="stylesheet" href="assets/css/contact-ie8.css">
     <![endif]-->
 <!--    <link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
-    <link rel="stylesheet" href="admin/styles/backstage.css">
+<!--    <link rel="stylesheet" href="admin/styles/backstage.css">-->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="icon" href="assets/images/logo.gif" type="image/x-icon"/>
     <link rel="stylesheet" href="assets/css/userCenter.css">

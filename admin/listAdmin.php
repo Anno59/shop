@@ -1,7 +1,7 @@
 <?php
 require_once "../include.php";
 checkLogined();
-$rows = getPage("imooc_admin");
+$rows = getPage("admin");
 $num = $_GET['num'];
 if(empty($num)){
     $num=1;
@@ -37,13 +37,12 @@ if(empty($num)){
         <tbody>
 
         <?php foreach($rows as $row):
-
          ?>
             <tr>
                 <td><?php echo $num?></td>
-                <td><?php echo $row["username"] ?></td>
+                <td class="username"><?php echo $row["username"] ?></td>
                 <td><?php echo $row["email"] ?></td>
-                <td align="center"><input type="button" value="修改" class="btn" onclick="editAdmin(<?php echo $row["id"];?>)">&nbsp;&nbsp;&nbsp;<input type="button" value="删除" class="btn" onclick="delAdmin(<?php echo $row["id"];?>)"></td>
+                <td align="center"><?php if($row["username"]!='superAdmin'){?><input type="button" value="修改" class="btn" onclick="editAdmin(<?php echo $row["id"];?>)">&nbsp;&nbsp;&nbsp;<input type="button" value="删除" class="btn" onclick="delAdmin(<?php echo $row["id"];?>)"><?php }?></td>
             </tr>
         <?php $num++; endforeach;?>
         <?php
@@ -63,7 +62,7 @@ if(empty($num)){
     }
     function delAdmin(id){
         if(window.confirm("您确定要删除吗？")){
-            window.location="doAdminAction.php?act=delAdmin&id="+id;
+            window.location="doAdmin.php?act=delAdmin&id="+id;
         }
     }
     function addAdmin(){

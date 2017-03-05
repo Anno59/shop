@@ -28,23 +28,23 @@ $row = fetchOne($sql);
     <form action="doPro.php?act=editPro&id=<?php echo $id;?>" method="post">
         <div class="form-group">
             <label>产品名</label>
-            <input type="text" name="title" class="form-control" id="exampleInputEmail3" placeholder="" value="<?php echo $row["title"]?>">
+            <input type="text" name="title" class="form-control" id="exampleInputEmail3" placeholder="" required value="<?php echo $row["title"]?>">
         </div>
         <div class="form-group">
             <label>产品概要</label>
-            <input type="text" name="description" class="form-control" id="exampleInputPassword3" placeholder="" value="<?php echo $row["description"]?>">
+            <input type="text" name="description" class="form-control" id="exampleInputPassword3" placeholder="" required value="<?php echo $row["description"]?>">
         </div>
         <div class="form-group">
             <label>产品价格</label>
-            <input type="text" name="prePrice" class="form-control" id="exampleInputPassword3" placeholder="" value="<?php echo $row["prePrice"]?>">
+            <input type="text" name="prePrice" class="form-control" id="exampleInputPassword3" placeholder="" required value="<?php echo $row["prePrice"]?>">
         </div>
         <div class="form-group">
             <label>产品优惠价</label>
-            <input type="text" name="discountPrice" class="form-control" id="exampleInputPassword3" placeholder="" value="<?php echo $row["discountPrice"]?>">
+            <input type="text" name="discountPrice" class="form-control" id="exampleInputPassword3" placeholder="" required value="<?php echo $row["discountPrice"]?>">
         </div>
         <div class="form-group">
             <label>简介</label>
-            <textarea style="resize: none" class="form-control" name="content" id="content" rows="6" placeholder=""><?php echo $row["content"]?></textarea>
+            <textarea style="resize: none" class="form-control" name="content" id="content" rows="6" placeholder="" required><?php echo $row["content"]?></textarea>
         </div>
         <button type="submit" class="btn btn-default">完成</button>
     </form>

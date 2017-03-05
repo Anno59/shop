@@ -73,7 +73,7 @@ if(empty($num)){
 
     function delUser(id){
         if(window.confirm("您确定要删除吗？")){
-            window.location="doUserAction.php?act=delUser&id="+id;
+            window.location="doUser.php?act=delUser&id="+id;
         }
     }
 

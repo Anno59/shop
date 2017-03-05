@@ -55,6 +55,9 @@ checkLogined();
         .nav-list>li>a,.nav-list>li>a b{
             color: #585858;
         }
+        .ace-nav>li.open.light-blue>a {
+            background-color: #efa80a!important;
+        }
     </style>
     <script>
         $(function () {
@@ -94,16 +97,7 @@ checkLogined();
                             }
                             ?>
                         </span>
-<!--                        <i class="icon-caret-down"></i>-->
                     </a>
-<!--                    <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-                        <li>
-                            <a href="doAdminAction.php?act=logout">
-                                <i class="icon-off"></i>
-                                退出
-                            </a>
-                        </li>
-                    </ul>-->
                 </li>
             </ul>
         </div>
@@ -264,9 +258,9 @@ checkLogined();
                         </li>
 
                         <li>
-                            <a href="doAdminAction.php?act=logout">
+                            <a href="doAdmin.php?act=logout">
                                 <i class="icon-double-angle-right"></i>
-                                退出注销
+                                注销登录
                             </a>
                         </li>
                     </ul>

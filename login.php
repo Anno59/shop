@@ -12,7 +12,7 @@
     <link rel="icon" href="assets/images/logo.gif" type="image/x-icon"/>
     <script src="assets/js/backtotop.js"></script>
     <script src="assets/js/jquery.js"></script>
-<!--    <script src="assets/js/contact.js"></script>-->
+    <script src="assets/js/validate.js"></script>
 </head>
 <body>
 <div class="header">
@@ -28,7 +28,7 @@
         <h1 class="header-h1">平邦保险</h1>
     </div>
 </div>
-<form action="doLogin.php" class="form container" id="form" method="post">
+<form action="doLogin.php" class="form container" onsubmit="return frontLoginRegValue()" id="form" method="post">
     <h2 >用户登录</h2>
     <div class="form-left">
         <label for="username"></label>
