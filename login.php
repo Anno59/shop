@@ -38,7 +38,7 @@
         <input id="password" class="password" name="password" type="password" placeholder="密码" value="">
         <span></span>
         <label for="submit"></label>
-        <input id="submit" class="submit" type="submit" value="提交">
+        <input id="submit" class="submit" type="submit" value="登录">
         <a href="register.php"><去注册></a>
     </div>
 <!--    <div class="form-right">

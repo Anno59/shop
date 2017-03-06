@@ -51,7 +51,7 @@
         <input id="email" class="email" name="email" type="text" placeholder="邮箱" value="">
         <span></span>
         <label for="submit"></label>
-        <input id="submit" class="submit" type="submit" value="提交">
+        <input id="submit" class="submit" type="submit" value="注册">
     </div>
 <!--    <div class="form-right">
         <ul>

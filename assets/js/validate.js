@@ -17,9 +17,9 @@ function frontLoginRegValue(){
 }
 $(function () {
     $('input.username').blur(function () {
-        var flag=this.value.match(/^.+/g);
+        var flag=this.value.match(/^[0-9a-zA-Z\u4e00-\u9fa5]{2,15}$/g);
         if(!flag){
-            $(this).next().html('<i class="icon-remove-circle"></i>&nbsp;&nbsp;请输入2-15位字母或汉字');
+            $(this).next().html('<i class="icon-remove-circle"></i>&nbsp;&nbsp;请输入2-15位字母数字或汉字');
             a = 0;
         }else{
             $(this).next().html('<i class="icon-ok-circle"></i>');
@@ -47,9 +47,9 @@ $(function () {
         }
     });
     $('input.password').blur(function () {
-        var flag=this.value.match(/^.+/g);
+        var flag=this.value.match(/^[0-9a-zA-Z]{3,8}/g);
         if(!flag){
-            $(this).next().html('<i class="icon-remove-circle"></i>&nbsp;&nbsp;请输入正确的密码');
+            $(this).next().html('<i class="icon-remove-circle"></i>&nbsp;&nbsp;请输入3-8位的正确密码');
             d = 0;
         }else{
             $(this).next().html('<i class="icon-ok-circle"></i>');
