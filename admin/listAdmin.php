@@ -42,7 +42,7 @@ if(empty($num)){
                 <td><?php echo $num?></td>
                 <td class="username"><?php echo $row["username"] ?></td>
                 <td><?php echo $row["email"] ?></td>
-                <td align="center"><?php if($row["username"]!='superAdmin'){?><input type="button" value="修改" class="btn" onclick="editAdmin(<?php echo $row["id"];?>)">&nbsp;&nbsp;&nbsp;<input type="button" value="删除" class="btn" onclick="delAdmin(<?php echo $row["id"];?>)"><?php }?></td>
+                <td align="center"><?php if($row["username"]!='superAdmin'){?><input type="button" value="修改" class="btn" onclick="modiAdmin(<?php echo $row["id"];?>)">&nbsp;&nbsp;&nbsp;<input type="button" value="删除" class="btn" onclick="delAdmin(<?php echo $row["id"];?>)"><?php }?></td>
             </tr>
         <?php $num++; endforeach;?>
         <?php
@@ -57,7 +57,7 @@ if(empty($num)){
 </div>
 <?php }?>
 <script type="text/javascript">
-    function editAdmin(id){
+    function modiAdmin(id){
         window.location="editAdmin.php?id="+id;
     }
     function delAdmin(id){
