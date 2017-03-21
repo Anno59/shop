@@ -8,7 +8,7 @@
 require_once "include.php";
 $act = $_GET['act'];
 $id = $_GET['id'];
-var_dump($id);
+//var_dump($id);
 if($act == 'register'){
     frontAddUser();
 }else if($act == 'login') {
