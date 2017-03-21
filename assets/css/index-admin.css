@@ -1,0 +1,71 @@
+.nav-list>li.active:after{
+    display: none;
+}
+@media only screen and (max-width: 991px) {
+    .sidebar.display{
+        margin-top: 55px;
+    }
+    .menu-toggler > .menu-text:after {
+        content: "菜单";
+    }
+
+    .menu-toggler::before, .menu-toggler::after {
+        display: none;
+    }
+}
+.frame{
+    margin-top: 50px;
+}
+small{
+    font-family: "Microsoft YaHei", yaHei;
+}
+.navbar,.ace-nav>li.light-blue>a{
+    background-color: #f1c40f;
+}
+.ace-nav>li.light-blue>a:hover, .ace-nav>li.light-blue>a:focus,.nav-list>li>a:hover:before,.nav-list>li>a:focus {
+    background-color: #f9f9f9;
+    color: #efa80a;
+}
+.nav-list li.active>a:after{
+    border-right-color: #efa80a;
+}
+.nav-list>li .submenu>li.active>a,.nav-list>li.open>a,.nav-list>li>a:hover,.nav-list>li .submenu>li>a:hover,.menu-min .nav-list>li:hover>a,.menu-min .nav-list>li.open:hover>a{
+    color: #efa80a;
+}
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+    border-color: #efa80a;
+}
+.nav-list>li>a,.nav-list>li>a b{
+    color: #585858;
+}
+.ace-nav>li.open.light-blue>a,.nav-list>li>a:hover:before {
+    background-color: #efa80a!important;
+}
+@media (min-width: 450px) {
+    .frame{
+        height: 470px;
+    }
+}
+@media (min-width: 1024px) {
+    .frame{
+        height: 481px;
+    }
+}
+@media (min-width: 1366px) {
+    .frame{
+        height: 542px;
+    }
+}
+@media (min-width: 1600px) {
+    .frame{
+        height: 652px;
+    }
+}
+@media (min-width: 1920px) {
+    .frame{
+        height: 802px;
+    }
+}
+body{
+    min-width: 600px;
+}

@@ -39,7 +39,7 @@ if(empty($num)){
             <th>密码</th>
             <th>姓名</th>
             <th>身份证号</th>
-            <th>手机号码</th>
+            <th>联系电话</th>
             <th>邮箱</th>
             <th>操作</th>
         </tr>

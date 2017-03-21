@@ -10,55 +10,11 @@ checkLogined();
     <link  rel="stylesheet" href="../assets/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../assets/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="../assets/css/ace.min.css"/>
+    <link rel="stylesheet" href="../assets/css/index-admin.css">
     <script src="../assets/js/ace-extra.min.js"></script>
     <script src="../assets/js/jquery-2.0.3.min.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/ace.min.js"></script>
-    <style>
-        .nav-list>li.active:after{
-            display: none;
-        }
-        @media only screen and (max-width: 991px) {
-            .menu-toggler > .menu-text:after {
-                content: "菜单";
-            }
-
-            .menu-toggler::before, .menu-toggler::after {
-                display: none;
-            }
-        }
-        .frame{
-            margin-top: 50px;
-        }
-        small{
-            font-family: "Microsoft YaHei", yaHei;
-        }
-        .navbar{
-            background-color: #f1c40f;
-        }
-        .ace-nav>li.light-blue>a{
-            background-color: #efa80a;
-        }
-        .ace-nav>li.light-blue>a:hover, .ace-nav>li.light-blue>a:focus,.nav-list>li>a:hover:before,.nav-list>li>a:focus {
-            background-color: #f9f9f9;
-            color: #efa80a;
-        }
-        .nav-list li.active>a:after{
-            border-right-color: #efa80a;
-        }
-        .nav-list>li .submenu>li.active>a,.nav-list>li.open>a,.nav-list>li>a:hover,.nav-list>li .submenu>li>a:hover{
-            color: #efa80a;
-        }
-        .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
-            border-color: #efa80a;
-        }
-        .nav-list>li>a,.nav-list>li>a b{
-            color: #585858;
-        }
-        .ace-nav>li.open.light-blue>a {
-            background-color: #efa80a!important;
-        }
-    </style>
     <script>
         $(function () {
             /*列表点击后显示*/
@@ -276,7 +232,7 @@ checkLogined();
 
         <div class="main-content">
             <div class="page-content">
-                <iframe src="main.php" class="frame" frameborder="0" name="mainFrame" width="100%" height="600"></iframe>
+                <iframe src="main.php" class="frame" frameborder="0" name="mainFrame" width="100%"></iframe>
             </div>
         </div>
     </div>
