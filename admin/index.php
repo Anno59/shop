@@ -58,6 +58,9 @@ checkLogined();
         .ace-nav>li.open.light-blue>a {
             background-color: #efa80a!important;
         }
+        body{
+            min-width: 520px;
+        }
     </style>
     <script>
         $(function () {
