@@ -8,25 +8,25 @@
 function addNews(){
     $arr=$_POST;
     if(insert("news", $arr)){
-        alertMes("添加成功", 'addNews.php');
+        messageTips("添加成功", 'addNews.php');
     }else{
-        alertMes("添加失败", 'addNews.php');
+        messageTips("添加失败", 'addNews.php');
     }
 }
 
 function delNews($id){
     if(delete("news","id=$id")){
-        alertMes("删除成功", "listNews.php");
+        messageTips("删除成功", "listNews.php");
     }else{
-        alertMes("删除失败", "listNews.php");
+        messageTips("删除失败", "listNews.php");
     }
 }
 
 function editNews($id){
     $arr = $_POST;
     if(update("news", $arr ,"id=$id")){
-        alertMes("编辑成功", "listNews.php");
+        messageTips("编辑成功", "listNews.php");
     }else{
-        alertMes("编辑失败", "listNews.php");
+        messageTips("编辑失败", "listNews.php");
     }
 }

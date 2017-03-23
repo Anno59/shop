@@ -53,16 +53,7 @@
         <label for="submit"></label>
         <input id="submit" class="submit" type="submit" value="注册">
     </div>
-<!--    <div class="form-right">
-        <ul>
-            <li class="li-1">中央大道1号</li>
-            <hr>
-            <li class="li-2">bigHeng@gmail.com</li>
-            <hr>
-            <li class="li-3">+010-10086</li>
-        </ul>
-    </div>
---></form>
+</form>
 <div class="footer">
     <div class="container">
         <div class="left">
@@ -75,12 +66,7 @@
                 <li><a  class="selected" href="javascript:void(0)">用户中心</a></li>
             </ul>
         </div>
-<!--        <div class="right">
-            <h2>订阅我们</h2><br>
-            <input class="email" type="email" placeholder="你的邮箱">
-            <input type="button" value="订阅">
-        </div>
--->    </div>
+    </div>
 </div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: 372025284@qq.com
+ * User: yubolin
  * Date: 2017.02.21
  * Time: 21:37
  */
@@ -13,9 +13,9 @@ function checkUser($sql){
 function addUser(){
     $arr=$_POST;
     if(insert("user", $arr)){
-        alertMes("添加成功", 'addUser.php');
+        messageTips("添加成功", 'addUser.php');
     }else{
-        alertMes("添加失败", 'addUser.php');
+        messageTips("添加失败", 'addUser.php');
     }
 }
 
@@ -28,16 +28,16 @@ function getAllUser(){
 function editUser($id){
     $arr = $_POST;
     if(update("user", $arr,"id={$id}")){
-        alertMes("编辑成功", 'listUser.php');
+        messageTips("编辑成功", 'listUser.php');
     }else{
-        alertMes("编辑失败", 'listUser.php');
+        messageTips("编辑失败", 'listUser.php');
     }
 }
 
 function delUser($id){
     if(delete("user","id={$id}")){
-        alertMes("删除成功", 'listUser.php');
+        messageTips("删除成功", 'listUser.php');
     }else{
-        alertMes("删除失败", 'listUser.php');
+        messageTips("删除失败", 'listUser.php');
     }
 }

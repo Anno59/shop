@@ -1,13 +1,13 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: 372025284@qq.com
+ * User: yubolin
  * Date: 2017.02.23
  * Time: 22:40
  */
 function checkUserLogined(){
     if(@$_SESSION['userId']==''&&$_COOKIE['userId']==''){
-        alertMes("请先登录","login.php");
+        messageTips("请先登录","login.php");
         exit;
     }
 }
@@ -15,34 +15,35 @@ function checkUserLogined(){
 function frontAddUser(){
     $arr=$_POST;
     if(insert("user", $arr)){
-        alertMes("注册成功,请登录", 'login.php');
+        messageTips("注册成功,请登录", 'login.php');
     }else{
-        alertMes("注册失败", 'register.php#form');
+        messageTips("注册失败", 'register.php#form');
     }
 }
+
 function frontLoginOut(){
     $_SESSION = array();
     if(isset($_COOKIE[session_name()])){
         setcookie(session_name(),'',time()-1);
     }
     session_destroy();
-    alertMes("退出成功","login.php");
+    messageTips("退出成功","login.php");
 }
 
 function orderPro(){
     $arr=$_POST;
     if(selectOrder("order_pro",$arr["username"],$arr["proId"])){
-        alertMes("该产品已预约，请继续预约其它产品","pro.php");
+        messageTips("该产品已预约，请继续预约其它产品","pro.php");
     }else{
         insert("order_pro",$arr);
-        alertMes("预约成功","pro.php");
+        messageTips("预约成功","pro.php");
     }
 }
 
 function cancelProOrder($id){
     if(delete("order_pro","id={$id}")){
-        alertMes("取消成功", 'userCenter.php');
+        messageTips("取消成功", 'userCenter.php');
     }else{
-        alertMes("取消失败", 'userCenter.php');
+        messageTips("取消失败", 'userCenter.php');
     }
 }

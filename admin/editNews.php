@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: 372025284@qq.com
+ * User: yubolin
  * Date: 2017.02.26
  * Time: 21:05
  */
@@ -25,21 +25,21 @@ $row = fetchOne($sql);
 <body>
 <h3>编辑新闻</h3>
 <div class="container">
-        <form action="doNews.php?act=editNews&id=<?php echo $id;?>" method="post">
-            <div class="form-group">
-                <label>新闻标题</label>
-                <input type="text" name="title" class="form-control" id="exampleInputEmail3" required value="<?php echo $row['title']?>">
-            </div>
-            <div class="form-group">
-                <label>新闻概要</label>
-                <input type="text" name="description" class="form-control" id="exampleInputPassword3" required value="<?php echo $row['description']?>">
-            </div>
-            <div class="form-group">
-                <label>新闻内容</label>
-                <textarea style="resize: none" class="form-control" name="content" id="content" rows="10" required><?php echo $row['content']?></textarea>
-            </div>
-            <button type="submit" class="btn btn-default">完成</button>
-        </form>
+    <form action="doNews.php?act=editNews&id=<?php echo $id;?>" method="post">
+        <div class="form-group">
+            <label>新闻标题</label>
+            <input type="text" name="title" class="form-control" id="exampleInputEmail3" required value="<?php echo $row['title']?>">
+        </div>
+        <div class="form-group">
+            <label>新闻概要</label>
+            <input type="text" name="description" class="form-control" id="exampleInputPassword3" required value="<?php echo $row['description']?>">
+        </div>
+        <div class="form-group">
+            <label>新闻内容</label>
+            <textarea style="resize: none" class="form-control" name="content" id="content" rows="10" required><?php echo $row['content']?></textarea>
+        </div>
+        <button type="submit" class="btn btn-default">完成</button>
+    </form>
 </div>
 </body>
 </html>

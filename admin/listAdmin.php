@@ -65,9 +65,6 @@ if(empty($num)){
             window.location="doAdmin.php?act=delAdmin&id="+id;
         }
     }
-    function addAdmin(){
-        window.location="addAdmin.php";
-    }
 </script>
 </body>
 </html>

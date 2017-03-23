@@ -1,12 +1,11 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: 372025284@qq.com
+ * User: yubolin
  * Date: 2017.02.23
  * Time: 22:52
  */
 require_once 'include.php';
-//var_dump($_SESSION['userName'])
 checkUserLogined();
 $username = $_SESSION['userName'];
 $sql = "select * from order_pro where username='$username'";
@@ -18,18 +17,14 @@ $rows = fetchAll($sql);
     <meta charset="UTF-8">
     <title>用户中心</title>
     <link rel="stylesheet" href="assets/css/common.css">
-<!--    <link rel="stylesheet" href="assets/css/contact.css">-->
     <!--[if IE 8]>
     <link rel="stylesheet" href="assets/css/contact-ie8.css">
     <![endif]-->
-<!--    <link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
-<!--    <link rel="stylesheet" href="admin/styles/backstage.css">-->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
     <link rel="icon" href="assets/images/logo.gif" type="image/x-icon"/>
     <link rel="stylesheet" href="assets/css/userCenter.css">
     <script src="assets/js/backtotop.js"></script>
     <script src="assets/js/jquery.js"></script>
-<!--    <script src="assets/js/contact.js"></script>-->
 </head>
 <body>
 <div class="header">
@@ -85,16 +80,7 @@ $rows = fetchAll($sql);
         }
         ?>
     </div>
-<!--    <div class="form-right">
-        <ul>
-            <li class="li-1">中央大道1号</li>
-            <hr>
-            <li class="li-2">bigHeng@gmail.com</li>
-            <hr>
-            <li class="li-3">+010-10086</li>
-        </ul>
-    </div>
---></form>
+</form>
 <div class="footer">
     <div class="container">
         <div class="left">
@@ -107,12 +93,7 @@ $rows = fetchAll($sql);
                 <li><a  class="selected" href="javascript:void(0)">用户中心</a></li>
             </ul>
         </div>
-<!--        <div class="right">
-            <h2>订阅我们</h2><br>
-            <input class="email" type="email" placeholder="你的邮箱">
-            <input type="button" value="订阅">
-        </div>
--->    </div>
+    </div>
 </div>
 <script type="text/javascript">
     function viewDetail(id){

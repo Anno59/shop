@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: 372025284@qq.com
+ * User: yubolin
  * Date: 2017.02.21
  * Time: 21:13
  */
@@ -75,10 +75,6 @@ if(empty($num)){
         if(window.confirm("您确定要删除吗？")){
             window.location="doUser.php?act=delUser&id="+id;
         }
-    }
-
-    function addUser(){
-        window.location="addUser.php";
     }
 
     /*用户信息加密*/

@@ -69,9 +69,6 @@ if(empty($num)){
             window.location="doPro.php?act=delPro&id="+id;
         }
     }
-    function addPro(){
-        window.location="addPro.php";
-    }
 </script>
 </body>
 </html>

@@ -5,11 +5,9 @@
  * Date: 2017/2/8
  * Time: 17:16
  */
-//require_once '../include.php';
 
 /**
  * 连接数据库
- * @return mysqli
  */
 function connect(){
     $link = mysqli_connect(HOST,USERNAME,PWD,DBNAME) or die("数据库连接失败:".mysqli_error($link));
@@ -19,9 +17,6 @@ function connect(){
 
 /**
  * 插入数据
- * @param $table
- * @param $array
- * @return int|string
  */
 function insert($table,$array){
     $link = connect();
@@ -41,13 +36,18 @@ function selectOrder($table,$username,$proId){
     }
 }
 
+/**
+ * 删除数据
+ */
+function delete($table,$where=null){
+    $link = connect();
+    $sql = "delete from {$table} ".($where==null?null:'where '.$where);
+    mysqli_query($link,$sql);
+    return mysqli_affected_rows($link);
+}
 
 /**
  * 修改数据
- * @param $table
- * @param $array
- * @param null $where
- * @return bool|int
  */
 function update($table,$array,$where=null){
     $link = connect();
@@ -69,25 +69,9 @@ function update($table,$array,$where=null){
     }
 }
 
-//delete from table where
-/**
- * 删除数据
- * @param $table
- * @param null $where
- * @return int
- */
-function delete($table,$where=null){
-    $link = connect();
-    $sql = "delete from {$table} ".($where==null?null:'where '.$where);
-    mysqli_query($link,$sql);
-    return mysqli_affected_rows($link);
-}
 
 /**
  * 得到一条数据
- * @param $sql
- * @param int $result_type
- * @return array|null
  */
 function fetchOne($sql,$result_type=MYSQLI_ASSOC){
     $link = connect();
@@ -98,9 +82,6 @@ function fetchOne($sql,$result_type=MYSQLI_ASSOC){
 
 /**
  * 得到所有数据
- * @param $sql
- * @param int $result_type
- * @return array
  */
 function fetchAll($sql,$result_type=MYSQLI_ASSOC){
     $link = connect();
@@ -113,23 +94,12 @@ function fetchAll($sql,$result_type=MYSQLI_ASSOC){
 }
 
 /**
- * 得到结果集中的记录条数
- * @param $sql
- * @return number
+ * 得到条数
  */
 function getResultNum($sql){
     $link = connect();
     $result=mysqli_query($link,$sql);
     return mysqli_num_rows($result);
-}
-
-/**
- * 得到上一步插入记录的ID号
- * @return number
- */
-function getInsertId(){
-    $link = connect();
-    return mysqli_insert_id($link);
 }
 
 

@@ -67,9 +67,6 @@ if(empty($num)){
             window.location="doNews.php?act=delNews&id="+id;
         }
     }
-    function addNews(){
-        window.location="addNews.php";
-    }
 </script>
 </body>
 </html>

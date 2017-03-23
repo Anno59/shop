@@ -18,12 +18,9 @@ $row = fetchOne($sql);
     <meta charset="UTF-8">
     <title>pro</title>
     <link rel="stylesheet" href="assets/css/common.css">
-<!--    <link rel="stylesheet" href="assets/css/pro.css">-->
     <!--[if IE 8]>
-    <!--<link rel="stylesheet" href="assets/css/pro-ie8.css">-->
     <![endif]-->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-<!--    <link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
     <link rel="icon" href="assets/images/logo.gif" type="image/x-icon"/>
     <link rel="stylesheet" href="assets/css/proDetail.css">
     <script src="assets/js/backtotop.js"></script>
@@ -54,7 +51,6 @@ $row = fetchOne($sql);
             <div class="pro_txt">价&nbsp;&nbsp;&nbsp;格：<span class="prePrice">￥<?php echo $row['prePrice']?></span></div>
             <div class="pro_txt">优惠价：<span class="discountPrice">￥<?php echo $row['discountPrice']?></span></div>
         </div>
-        <!--    <div class="contheight"></div>-->
     <div class="contheight"></div>
     <div class="contheight"></div>
     <div class="pro_txt">产品介绍</div>
@@ -90,10 +86,6 @@ $row = fetchOne($sql);
                 <li><a href="login.php">用户中心</a></li>
             </ul>
         </div>
-<!--        <div class="right">
-            <h2>订阅我们</h2><br>
-            <input class="email" type="text" placeholder="你的邮箱"><input type="button" value="订阅">
-        </div>-->
     </div>
 </div>
 </body>
