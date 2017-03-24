@@ -44,7 +44,8 @@ if(empty($num)){
                 <td><?php echo $row["email"] ?></td>
                 <td align="center"><?php if($row["username"]!='superAdmin'){?><input type="button" value="修改" class="btn" onclick="modiAdmin(<?php echo $row["id"];?>)">&nbsp;&nbsp;&nbsp;<input type="button" value="删除" class="btn" onclick="delAdmin(<?php echo $row["id"];?>)"><?php }?></td>
             </tr>
-        <?php $num++; endforeach;?>
+        <?php $num++;
+        endforeach;?>
         <?php
             if($totalRows>$pageSize){
         ?>

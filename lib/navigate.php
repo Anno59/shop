@@ -7,23 +7,13 @@
  */
 
 function getPage($table){
-    global $i;
+    global $i,$totalRows,$pageSize,$totalPage,$page;
     $i=1;
     $sql = "select * from $table ";
-    global $totalRows;
     $totalRows = getResultNum($sql);
-    global $pageSize;
     $pageSize =4;
-    global $totalPage;
     $totalPage = ceil($totalRows/$pageSize);
-    global $page;
     $page=$_REQUEST['page']?(int)$_REQUEST['page']:1;
-    if($page<1||$page==null||!is_numeric($page)){
-        $page=1;
-    }
-    if($page>=$totalPage){
-        $page=$totalPage;
-    }
     $offset=($page-1) * $pageSize;
     $sql = "select * from $table limit $offset,$pageSize";
     $rows = fetchAll($sql);

@@ -7,16 +7,11 @@
  */
 header("content-type:text/html;charset='utf-8");
 session_start();
-define('ROOT',dirname(__FILE__));
-set_include_path(".".PATH_SEPARATOR.ROOT."/lib".PATH_SEPARATOR.get_include_path());
-require_once 'configs.php';
-require_once 'mysql.php';
-require_once 'navigate.php';
-require_once 'admin.fun.php';
-require_once 'news.fun.php';
-require_once 'backUser.fun.php';
-require_once 'frontUser.fun.php';
-require_once 'pro.fun.php';
-function messageTips($mes,$url){
-    echo "<script>alert('$mes');window.location = '$url'</script>";
-}
+require_once '/lib/configs.php';
+require_once '/lib/mysql.php';
+require_once '/lib/navigate.php';
+require_once '/lib/admin.fun.php';
+require_once '/lib/news.fun.php';
+require_once '/lib/backUser.fun.php';
+require_once '/lib/frontUser.fun.php';
+require_once '/lib/pro.fun.php';
